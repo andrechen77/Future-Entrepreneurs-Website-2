@@ -1,11 +1,12 @@
 import React from 'react';
-import Echoer from './Echoer';
+import { ThemeProvider } from '@mui/material/';
+import theme from './theme';
 
 function App() {
 	return (
-		<div>
-			<Echoer/>
-		</div>
+		<ThemeProvider theme={theme}>
+
+		</ThemeProvider>
 	);
 }
 
