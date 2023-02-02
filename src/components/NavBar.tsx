@@ -1,14 +1,18 @@
 /** @jsxImportSource @emotion/react */
 
-import { Button, Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
-function NavBar({logoSrc, labels}: {logoSrc: string, labels: string[]}) {
-	const gridStyle = {
-		height: 100,
-	};
+type LinkData = {label: string, addr: string};
+
+function NavBar({logoSrc, links}: {logoSrc: string, links: LinkData[]}) {
+	const paddingAmount = 10;
 	const wrapperStyle = {
-		padding: [100, 200],
-		border: "10px solid yellow",
+		padding: `${paddingAmount}px ${paddingAmount}px`,
+	};
+	const gridStyle = {
+		height: 50,
+		paddingRight: 50,
 	};
 
 	return (
@@ -22,8 +26,8 @@ function NavBar({logoSrc, labels}: {logoSrc: string, labels: string[]}) {
 				<Grid item xs="auto">
 					<NavBarLogo imagesrc={logoSrc}/>
 				</Grid>
-				<Grid item xs="auto" container alignContent="center" justifyContent="flex-end" spacing={10}>
-					<NavBarLinks labels={labels}/>
+				<Grid item xs="auto" container alignContent="center" justifyContent="flex-end" spacing={5}>
+					<NavBarLinks links={links}/>
 				</Grid>
 			</Grid>
 		</div>
@@ -33,10 +37,10 @@ function NavBar({logoSrc, labels}: {logoSrc: string, labels: string[]}) {
 function NavBarLogo({imagesrc}: {imagesrc: string}) {
 	const style = {
 		maxWidth: 300,
-		maxHeight: 80,
+		maxHeight: 45,
 		"&:hover": {
 			maxWidth: 400,
-			maxHeight: 100,
+			maxHeight: 50,
 		},
 	};
 
@@ -47,17 +51,25 @@ function NavBarLogo({imagesrc}: {imagesrc: string}) {
 	);
 }
 
-function NavBarLinks({labels}: {labels: string[]}) {
+function NavBarLinks({links}: {links: LinkData[]}) {
+	const theme = useTheme();
+
+	const linkStyle = {
+		textDecoration: "none",
+		color: theme.palette.info.light,
+		"&:hover": {
+			color: theme.palette.info.dark,
+		},
+	};
+
 	return (
-		<>
-			{labels.map(label => {
-				return (
-					<Grid item>
-						<Button variant="contained">{label}</Button>
-					</Grid>
-				);
-			})}
-		</>
+		<>{links.map(link => {
+			return (
+				<Grid item key={link.label}>
+					<a href={link.addr} css={linkStyle}><Typography variant="button">{link.label}</Typography></a>
+				</Grid>
+			);
+		})}</>
 	);
 }
 

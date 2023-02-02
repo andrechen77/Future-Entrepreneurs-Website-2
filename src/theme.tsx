@@ -3,8 +3,11 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
 	typography: {
 		fontFamily: [
-			"Arial",
+			"Roboto",
+			"Helvetica",
 			"Times New Roman",
+			"Arial",
+			"sans-serif",
 		].join(','),
 	},
 });
