@@ -1,72 +1,59 @@
 /** @jsxImportSource @emotion/react */
 
-import { Grid, Typography } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Box, Button, Grid } from '@mui/material';
 
-type LinkData = {label: string, addr: string};
+type LinkData = {label: string, addr?: string};
+
+const navBarHeight = 80;
 
 function NavBar({logoSrc, links}: {logoSrc: string, links: LinkData[]}) {
-	const paddingAmount = 10;
-	const wrapperStyle = {
-		padding: `${paddingAmount}px ${paddingAmount}px`,
-	};
-	const gridStyle = {
-		height: 50,
-		paddingRight: 50,
-	};
-
 	return (
-		<div css={wrapperStyle}>
+		<Box sx={{ padding: 1, paddingRight: 3, bgcolor: "primary.main"}}>
 			<Grid
 				container
-				css={gridStyle}
+				css={{ height: navBarHeight }}
 				justifyContent="space-between"
 				alignContent="center"
 			>
 				<Grid item xs="auto">
 					<NavBarLogo imagesrc={logoSrc}/>
 				</Grid>
-				<Grid item xs="auto" container alignContent="center" justifyContent="flex-end" spacing={5}>
+				<Grid item xs="auto" container alignContent="center" justifyContent="flex-end" spacing={3}>
 					<NavBarLinks links={links}/>
 				</Grid>
 			</Grid>
-		</div>
+		</Box>
 	);
 }
 
 function NavBarLogo({imagesrc}: {imagesrc: string}) {
 	const style = {
 		maxWidth: 300,
-		maxHeight: 45,
+		maxHeight: navBarHeight,
 		"&:hover": {
-			maxWidth: 400,
-			maxHeight: 50,
+			maxWidth: 301,
+			maxHeight: navBarHeight + 1,
 		},
 	};
 
 	return (
-		<a href="https://wikipedia.com" onClick={() => console.log("I've been clicked")}>
+		<a href="/" onClick={() => console.log("I've been clicked")}>
 			<img css={style} src={imagesrc} alt="logo"/>
 		</a>
 	);
 }
 
 function NavBarLinks({links}: {links: LinkData[]}) {
-	const theme = useTheme();
-
-	const linkStyle = {
-		textDecoration: "none",
-		color: theme.palette.info.light,
-		"&:hover": {
-			color: theme.palette.info.dark,
-		},
-	};
-
 	return (
 		<>{links.map(link => {
 			return (
 				<Grid item key={link.label}>
-					<a href={link.addr} css={linkStyle}><Typography variant="button">{link.label}</Typography></a>
+					<Button
+						href={link.addr}
+						variant="text"
+						sx={{color: "common.white"}}
+						size="large"
+					>{link.label}</Button>
 				</Grid>
 			);
 		})}</>

@@ -1,25 +1,20 @@
-import React from 'react';
 import { ThemeProvider } from '@mui/material/';
 import theme from './theme';
 import NavBar from './components/NavBar';
-import BorderDemo from './components/BorderDemo';
 
 function App() {
 	const NavBarLinks = [
-		{label: "Alice", addr: "https://en.wikipedia.org/wiki/Alice's_Adventures_in_Wonderland"},
-		{label: "Bob", addr: "https://en.wikipedia.org/wiki/Bob_(dog)"},
-		{label: "Charlie", addr: "https://en.wikipedia.org/wiki/Charlie_(skeleton)"},
+		{label: "About Us", addr: "https://en.wikipedia.org/wiki/Entrepreneurship"},
+		{label: "Programs", addr: "https://en.wikipedia.org/wiki/Computer_program"},
+		{label: "Calendar", addr: "https://en.wikipedia.org/wiki/Calendar_Man"},
+		{label: "Blog", addr: "https://en.wikipedia.org/wiki/Blarg"},
+		{label: "Contact", addr: "https://en.wikipedia.org/wiki/Contact_lens"},
 	];
 
 	return (
 		<ThemeProvider theme={theme}>
 			<div>
-				<NavBar logoSrc="logo512.png" links={NavBarLinks}/>
-			</div>
-			<div>
-				<BorderDemo size={10} color="green">
-					ABDCEDFG
-				</BorderDemo>
+				<NavBar logoSrc="images/logo.png" links={NavBarLinks}/>
 			</div>
 		</ThemeProvider>
 	);
