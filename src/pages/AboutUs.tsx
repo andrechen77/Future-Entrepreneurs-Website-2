@@ -6,7 +6,7 @@ const AboutUs = () =>{
         backgroundImage: `url("/images/chicago_skyline.jpg")`,
         backgroundPosition: "center",
         backgroundSize: "cover",
-        height: 400,
+        height: 300,
     };
     const centeredText = {
         display: "flex",
@@ -23,8 +23,11 @@ const AboutUs = () =>{
 
 	return (
         <Box>
-            <Paper sx={bannerStyle}>
+            <Paper elevation={0} square sx={bannerStyle}>
                 MEET THE TEAM
+            </Paper>
+            <Paper elevation={0} square sx={{typography: "body1", padding: 3}}>
+                This is the team or smth. Just copy charlie's code from "Get Involved" lmao
             </Paper>
             <Box sx={{padding: 3, bgcolor: "secondary.light"}}>
                 <Stack direction="column" spacing={3}>
