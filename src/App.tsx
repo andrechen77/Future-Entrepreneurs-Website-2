@@ -7,6 +7,7 @@ import Calendar from './pages/Calendar';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import HomePage from './pages/HomePage';
+import GetInvolved from './pages/GetInvolved';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 		{label: "Calendar", addr: "/Calendar"},
 		{label: "Blog", addr: "/Blog"},
 		{label: "Contact", addr: "/Contact"},
+		{label: "Get Involved", addr: "/GetInvolved"},
 	];
 
 	return (
@@ -30,6 +32,7 @@ function App() {
 						<Route path='/Calendar'  element={<Calendar />} />
 						<Route path='/Blog'  element={<Blog />} />
 						<Route path='/Contact'  element={<Contact />} />
+						<Route path='/GetInvolved'  element={<GetInvolved />} />
 					</Routes>
 				</Router>
 			</div>
