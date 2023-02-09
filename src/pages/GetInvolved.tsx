@@ -2,6 +2,7 @@ import {PopupPrompt } from './../components/GetInvolvedPopup';
 const GetInvolved = () =>{
 	return (
         <div>
+        <Box sx={{backgroundColor: 'secondary.main'}}>
             <h1>
                 Get Involved
             </h1>
