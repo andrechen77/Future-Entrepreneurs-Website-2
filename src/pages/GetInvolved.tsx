@@ -1,21 +1,25 @@
 import {PopupPrompt } from './../components/GetInvolvedPopup';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography'
 
 const GetInvolved = () =>{
 	return (
         <Box sx={{backgroundColor: 'secondary.main'}}>
             <div>
-            <h1>
+            <Typography variant="h2">
                 Get Involved
-            </h1>
-            <h2>
+            </Typography>
+
+            <Typography variant="h3">
                 Become a part of the team. Change a life
-            </h2>
-            <p>
+            </Typography>
+
+            <Typography variant="body1">
                 Lorem ipsum dolor sit amet. consectetur adipiscing elit. 
                 Sed dictum orci ut augue vestibulum vestibulum sed bibendum quam.
                 Maecenas ultricies nulla blandit ex satitis elementum. 
-            </p>
+            </Typography>
+
             <img src='/images/icon.png' alt="Logo" />
             <img src='/images/icon.png' alt="Logo" />
             
