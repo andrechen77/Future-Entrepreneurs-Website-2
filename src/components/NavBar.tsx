@@ -1,12 +1,8 @@
-/** @jsxImportSource @emotion/react */
-
 import { Box, Button, Grid } from '@mui/material';
+import { LinkData } from "../types/LinkData";
+import BigLogo from './BigLogo';
 
-type LinkData = {label: string, addr?: string};
-
-const navBarHeight = 80;
-
-function NavBar({logoSrc, links}: {logoSrc: string, links: LinkData[]}) {
+function NavBar({links}: {links: LinkData[]}) {
 	return (
 		<Box sx={{ padding: 1, paddingRight: 3, bgcolor: "primary.main"}}>
 			<Grid
@@ -16,30 +12,13 @@ function NavBar({logoSrc, links}: {logoSrc: string, links: LinkData[]}) {
 				alignContent="center"
 			>
 				<Grid item xs="auto">
-					<NavBarLogo imagesrc={logoSrc}/>
+					<BigLogo/>
 				</Grid>
 				<Grid item xs="auto" container alignContent="center" justifyContent="flex-end" spacing={3}>
 					<NavBarLinks links={links}/>
 				</Grid>
 			</Grid>
 		</Box>
-	);
-}
-
-function NavBarLogo({imagesrc}: {imagesrc: string}) {
-	const style = {
-		maxWidth: 300,
-		maxHeight: navBarHeight,
-		"&:hover": {
-			maxWidth: 301,
-			maxHeight: navBarHeight + 1,
-		},
-	};
-
-	return (
-		<a href="/" onClick={() => console.log("I've been clicked")}>
-			<img css={style} src={imagesrc} alt="logo"/>
-		</a>
 	);
 }
 
