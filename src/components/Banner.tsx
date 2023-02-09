@@ -6,6 +6,7 @@ const bgImage = {
 	height: 300,
 };
 const centeredText = {
+	textAlign: "center",
 	display: "flex",
 	justifyContent: "center",
 	alignItems: "center",
