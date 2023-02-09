@@ -1,3 +1,4 @@
+import {PopupPrompt } from './../components/GetInvolvedPopup';
 const GetInvolved = () =>{
 	return (
         <div>
@@ -14,6 +15,8 @@ const GetInvolved = () =>{
             </p>
             <img src='/images/icon.png' alt="Logo" />
             <img src='/images/icon.png' alt="Logo" />
+            
+            <PopupPrompt/>
         </div>
 	);
 }
