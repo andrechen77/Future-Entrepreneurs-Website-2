@@ -1,8 +1,10 @@
 import {PopupPrompt } from './../components/GetInvolvedPopup';
+import Box from '@mui/material/Box';
+
 const GetInvolved = () =>{
 	return (
-        <div>
         <Box sx={{backgroundColor: 'secondary.main'}}>
+            <div>
             <h1>
                 Get Involved
             </h1>
@@ -19,6 +21,7 @@ const GetInvolved = () =>{
             
             <PopupPrompt/>
         </div>
+        </Box>
 	);
 }
 
