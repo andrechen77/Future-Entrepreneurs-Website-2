@@ -58,30 +58,3 @@ const HomePage = () =>{
 export default HomePage;
 
 
-
-{/* <article
-className={styles.article}
-style={{ backgroundImage: `url(${background})` }}
->
-<h1 className={styles.header}>React Is Awesome</h1>
-</article> */}
-
-
-    {/* <div style={{ 
-      backgroundImage: './../images/chicago_skyline.jpg'
-    }}>
-      Future Entrepreneurs
-    </div> */}
-
-
-
-	// .bgSizeCover {
-	// 	background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
-	// 	background-size: cover;
-	// 	width: 160px;
-	// 	height: 160px;
-	// 	border: 2px solid;
-	// 	color: pink;
-	// 	resize: both;
-	// 	overflow: scroll;
-	//   }
