@@ -11,7 +11,7 @@ function NavBar({logoSrc, links}: {logoSrc: string, links: LinkData[]}) {
 		<Box sx={{ padding: 1, paddingRight: 3, bgcolor: "primary.main"}}>
 			<Grid
 				container
-				css={{ height: navBarHeight }}
+				// css={{ height: navBarHeight }}
 				justifyContent="space-between"
 				alignContent="center"
 			>
@@ -47,7 +47,7 @@ function NavBarLinks({links}: {links: LinkData[]}) {
 	return (
 		<>{links.map(link => {
 			return (
-				<Grid item key={link.label}>
+				<Grid item key={link.label} xs={12} lg="auto">
 					<Button
 						href={link.addr}
 						variant="text"
