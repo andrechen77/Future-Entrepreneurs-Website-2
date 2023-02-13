@@ -12,7 +12,7 @@ function AboutUs() {
             <Box sx={{padding: 3, bgcolor: "secondary.light"}}>
                 <Stack direction="column" spacing={10}>
                     <AboutSection name="Mario Feijoo" left={true}>The Greatest Man of All Time</AboutSection>
-                    <AboutSection name="Mario Feijoo2" left={false}>The greatest man of All Time</AboutSection>
+                    <AboutSection name="Mario Feijoo2" left={true}>The greatest man of All Time</AboutSection>
                     <AboutSection name="Mario Feijoo3" left={true}>The greatest man of All Time</AboutSection>
                 </Stack>
             </Box>
