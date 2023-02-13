@@ -6,11 +6,9 @@ import Banner from '../components/Banner';
 function AboutUs() {
 	return (
         <Box>
-					<Banner imgsrc="/images/chicago_skyline.jpg">MEET THE TEAM</Banner>
-					<Paper elevation={0} square sx={{typography: "body1", padding: 3}}>
-            <Paper sx={{padding: 15, typography: "h1", textAlign: "center"}}>
-                MEET THE TEAM
-            </Paper>
+				<Banner imgsrc="/images/chicago_skyline.jpg">MEET THE TEAM</Banner>
+				<Paper elevation={0} square sx={{typography: "body1", padding: 3}}>
+                </Paper> 
             <Box sx={{padding: 3, bgcolor: "secondary.light"}}>
                 <Stack direction="column" spacing={10}>
                     <AboutSection name="Mario Feijoo" left={true}>The Greatest Man of All Time</AboutSection>
