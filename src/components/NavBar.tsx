@@ -1,24 +1,19 @@
-/** @jsxImportSource @emotion/react */
+import { Box, Button, Grid, Stack } from '@mui/material';
+import { LinkData } from "../types/LinkData";
+import BigLogo from './BigLogo';
 
-import { Box, Button, Grid } from '@mui/material';
-
-type LinkData = {label: string, addr?: string};
-
-const navBarHeight = 80;
-
-function NavBar({logoSrc, links}: {logoSrc: string, links: LinkData[]}) {
+function NavBar({links}: {links: LinkData[]}) {
 	return (
-		<Box sx={{ padding: 1, paddingRight: 3, bgcolor: "primary.main"}}>
+		<Box sx={{ py: 1, px: 3, bgcolor: "primary.main"}}>
 			<Grid
 				container
-				// css={{ height: navBarHeight }}
 				justifyContent="space-between"
 				alignContent="center"
 			>
 				<Grid item xs="auto">
-					<NavBarLogo imagesrc={logoSrc}/>
+					<BigLogo/>
 				</Grid>
-				<Grid item xs="auto" container alignContent="center" justifyContent="flex-end" spacing={3}>
+				<Grid item xs={12} md="auto" container alignContent="center">
 					<NavBarLinks links={links}/>
 				</Grid>
 			</Grid>
@@ -26,37 +21,22 @@ function NavBar({logoSrc, links}: {logoSrc: string, links: LinkData[]}) {
 	);
 }
 
-function NavBarLogo({imagesrc}: {imagesrc: string}) {
-	const style = {
-		maxWidth: 300,
-		maxHeight: navBarHeight,
-		"&:hover": {
-			maxWidth: 301,
-			maxHeight: navBarHeight + 1,
-		},
-	};
-
-	return (
-		<a href="/" onClick={() => console.log("I've been clicked")}>
-			<img css={style} src={imagesrc} alt="logo"/>
-		</a>
-	);
-}
-
 function NavBarLinks({links}: {links: LinkData[]}) {
 	return (
-		<>{links.map(link => {
-			return (
-				<Grid item key={link.label} xs={12} lg="auto">
-					<Button
-						href={link.addr}
-						variant="text"
-						sx={{color: "common.white"}}
-						size="large"
-					>{link.label}</Button>
-				</Grid>
-			);
-		})}</>
+		<Stack direction={{ xs: "column", md: "row" }} spacing={3}>
+			{links.map(link => {
+				return (
+					<Grid item key={link.label} xs="auto">
+						<Button
+							href={link.addr}
+							variant="text"
+							sx={{color: "common.white"}}
+							size="large"
+						>{link.label}</Button>
+					</Grid>
+				);
+			})}
+		</Stack>
 	);
 }
 
