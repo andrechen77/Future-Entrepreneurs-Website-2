@@ -1,20 +1,19 @@
-import { Box, Button, Grid } from '@mui/material';
+import { Box, Button, Grid, Stack } from '@mui/material';
 import { LinkData } from "../types/LinkData";
 import BigLogo from './BigLogo';
 
 function NavBar({links}: {links: LinkData[]}) {
 	return (
-		<Box sx={{ padding: 1, paddingRight: 3, bgcolor: "primary.main"}}>
+		<Box sx={{ py: 1, px: 3, bgcolor: "primary.main"}}>
 			<Grid
 				container
-				// css={{ height: navBarHeight }}
 				justifyContent="space-between"
 				alignContent="center"
 			>
 				<Grid item xs="auto">
 					<BigLogo/>
 				</Grid>
-				<Grid item xs="auto" container alignContent="center" justifyContent="flex-end" spacing={3}>
+				<Grid item xs={12} md="auto" container alignContent="center">
 					<NavBarLinks links={links}/>
 				</Grid>
 			</Grid>
@@ -24,18 +23,20 @@ function NavBar({links}: {links: LinkData[]}) {
 
 function NavBarLinks({links}: {links: LinkData[]}) {
 	return (
-		<>{links.map(link => {
-			return (
-				<Grid item key={link.label} xs={12} lg="auto">
-					<Button
-						href={link.addr}
-						variant="text"
-						sx={{color: "common.white"}}
-						size="large"
-					>{link.label}</Button>
-				</Grid>
-			);
-		})}</>
+		<Stack direction={{ xs: "column", md: "row" }} spacing={3}>
+			{links.map(link => {
+				return (
+					<Grid item key={link.label} xs="auto">
+						<Button
+							href={link.addr}
+							variant="text"
+							sx={{color: "common.white"}}
+							size="large"
+						>{link.label}</Button>
+					</Grid>
+				);
+			})}
+		</Stack>
 	);
 }
 
