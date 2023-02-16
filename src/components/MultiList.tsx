@@ -6,6 +6,8 @@ const styling = {
     height: '150px', 
     bgcolor: '#465093',
     color: 'white',
+    position: 'relative',
+    display: 'flex'
 };
 
 const textStyling = {
