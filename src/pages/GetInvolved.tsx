@@ -1,9 +1,5 @@
 import {DonatePopup} from './../components/GetInvolvedPopup';
-import {Box, Typography} from '@mui/material';
-import {Button, Input, Container, FormControl, TextField} from '@mui/material';
-import Grid from '@mui/material/Grid'
-import Paper from '@mui/material/Paper'
-import { styled } from '@mui/material/styles';
+import {Box, Typography, Grid, Paper, styled} from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -46,6 +42,7 @@ const GetInvolved = () =>{
                 </Grid>
             </Box>
             
+            <br></br>
             <DonatePopup/>
         </div>
         </Box>
