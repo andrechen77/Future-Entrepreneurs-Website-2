@@ -1,6 +1,6 @@
 // import { ThemeProvider } from '@mui/material/';
 import theme from './../theme';
-import { Box, Container} from '@mui/material/';
+import { Box, Container, Grid, Typography, TextField} from '@mui/material/';
 import Banner from '../components/Banner';
 
 const HomePage = () => {
@@ -11,7 +11,7 @@ const HomePage = () => {
             </Box>
 
             <Container maxWidth = "sm">
-			<Box style = {{fontSize: 100,
+			<Box style = {{fontSize: 50,
 			textAlign: 'center',
 			fontWeight: 'bold',
             marginTop: 120,
@@ -20,9 +20,9 @@ const HomePage = () => {
 			</Box>
             </Container>
 
-            <Container sx={{ maxWidth:'60%'  }} maxWidth={false} >
+            <Container sx={{ maxWidth:'60%', position: 'center'}} maxWidth={false} >
             <p style = {{
-					fontSize: 60,
+					fontSize: 30,
 					fontWeight: 'normal',
 					textAlign: 'center',
 				}}> Our mission is to create an educational environment that provides opportunities and empowers 
@@ -40,8 +40,6 @@ const HomePage = () => {
                 Entrepreneurs USA was created.
                 <br></br> 
                 <br></br> 
-                <br></br> 
-                <br></br> 
                 {/* <Box style = {{backgroundImage: "/images/homepage.png"}}>
 
                 "Future Entrepreneurs USA is a corporation that teaches hands-on skills to young adults looking to build 
@@ -49,33 +47,87 @@ const HomePage = () => {
                 AV space/studio to create marketing pieces."
                 </Box> */}
                 {/* <img src = "/images/homepage.png" width = "100%"></img> */}
-                <br></br> 
-                <br></br> 
+                <div style = {{width: "120%", 
+            position: 'relative', 
+            marginLeft: -100}}>
+                <hr></hr>
+                </div>
 
-
-                <iframe width="2240" height="1260" 
+                <iframe width="950" height="600" 
                     src="https://www.youtube.com/embed/92ZmzD70sOU" 
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     > 
                 </iframe>
+                <div style = {{width: "120%", 
+            position: 'relative', 
+            marginLeft: -100}}>
+                <hr></hr>
+                </div>
 
-                </p>
 
-                
+                <Grid container direction="row" alignItems="center">
+                    <Grid item style = {{backgroundImage: `url("${"/images/home.png"}")`,
+		width: 650,
+		height: 370,
+		marginLeft: 380,
+		marginTop: 10,
+        }}>
+                </Grid>
+                <Grid item style = {{fontSize: 45,
+			textAlign: 'left',
+            position: 'relative',
+			fontWeight: 'bold',
+            flexWrap: 'wrap-reverse',
+            marginTop: - 700,
+            marginRight: 200,
+            marginLeft: -100}} >
+                     The Future of Business
+                </Grid>
+                <Grid item style = {{fontSize: 30,
+                textAlign: 'left', 
+                marginTop: -580,
+                marginRight: 200,
+                marginLeft: -580,
+                flexWrap: 'wrap-reverse'
+                }}>
+                    text
+                </Grid>
+                    </Grid>
 
 
+                    <div style = {{width: "120%", 
+            position: 'relative', 
+            marginLeft: -100}}>
+                <hr></hr>
+                </div>
 
-                {/* <Box sx={{ 
-                        position: 'relative',
-                        display: "inline-flex",
-                        justify: 'center',
-                        padding: '10px',
-                        width: "100%",
-                        height: 500,
-                        flex: 1
-                        }}>
-                </Box> */}
+                <Box sx={{
+                width: '115%',
+                marginLeft: -9,
+                alignItems: 'center',
+                height: '300px',
+                backgroundColor: '#465093'
+                }}>
+                    <Typography color = "white" fontWeight={'bold'} fontSize = {40}> 
+                    Join the FE-USA Community
+                    </Typography>
+
+                    <Typography color = "white" fontWeight={'bold'} fontSize = {20} marginBottom  = {10}> 
+                    Sign up with your name and email to receive updates!
+                    </Typography>
+                    <Box style = {{flexWrap: 'nowrap'}}>
+                    <TextField id="outlined-basic" label="First Name" variant="outlined"  margin = {'none'}/>
+                    <TextField id="outlined-basic" label="Last Name" variant="outlined" />
+                        <TextField id="outlined-basic" label="Email" variant="outlined" />   
+                    </Box> 
+                        </Box>
+                       
+
+                        
+                        
+                        </p>
+
 
                 </Container>
             
@@ -85,28 +137,3 @@ const HomePage = () => {
 
 export default HomePage;
 
-
-
-
-
- 
-
-
-
-
-{/* <Box style = {{backgroundImage: `url("${"/images/icon.png"}")`,
-		width: 800,
-		height: 400}}>
-			<div style = {{fontSize: 75,
-			textAlign: 'left',
-			marginLeft: -600,
-			fontWeight: 'bold'}}>
-				More Info
-				<p style = {{
-					fontSize: 30,
-					fontWeight: 'normal',
-					textAlign: 'center'
-				}}>  </p>
-			</div>
-
-			</Box> */}
