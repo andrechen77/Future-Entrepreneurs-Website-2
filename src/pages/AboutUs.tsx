@@ -1,7 +1,7 @@
 import { Box, Paper, Stack } from '@mui/material/';
-import { alignProperty } from '@mui/material/styles/cssUtils';
 import AboutSection from '../components/AboutSection';
 import Banner from '../components/Banner';
+import Lipsum from '../components/Lipsum';
 
 function AboutUs() {
 	return (
@@ -12,34 +12,13 @@ function AboutUs() {
             <Box sx={{padding: 3, bgcolor: "secondary.light"}}>
                 <Stack direction="column" spacing={10}>
                     <AboutSection name="Mario Feijoo" left={true} profile='images/mario1.jpeg'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus justo efficitur, gravida lorem eget, semper magna.
-                        Maecenas pulvinar felis at eros semper maximus. Pellentesque tincidunt lorem a iaculis faucibus. Ut pellentesque ex in lectus
-                        porta pharetra. Quisque pellentesque justo eu lorem vestibulum, id egestas nulla ultrices. Vivamus pulvinar rutrum tristique.
-                        Vivamus vel tristique mauris, ut pharetra justo. Duis at felis tortor.
-						Aliquam ut libero eu neque malesuada cursus. Suspendisse elementum, odio quis scelerisque commodo, lacus quam vulputate justo,
-                        vitae fermentum eros dui sit amet ante. Nullam dictum ligula libero, eget imperdiet enim hendrerit id. Duis congue elit eget auctor
-                        pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan metus ligula, a accumsan tellus fermentum sit
-                         amet. Cras id tincidunt mi.
+						<Lipsum p={1} s={8}/>
 					</AboutSection>
                     <AboutSection name="Mario Feijoo" left={false} profile='images/mario1.jpeg'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus justo efficitur, gravida lorem eget, semper magna.
-                        Maecenas pulvinar felis at eros semper maximus. Pellentesque tincidunt lorem a iaculis faucibus. Ut pellentesque ex in lectus
-                        porta pharetra. Quisque pellentesque justo eu lorem vestibulum, id egestas nulla ultrices. Vivamus pulvinar rutrum tristique.
-                        Vivamus vel tristique mauris, ut pharetra justo. Duis at felis tortor.
-						Aliquam ut libero eu neque malesuada cursus. Suspendisse elementum, odio quis scelerisque commodo, lacus quam vulputate justo,
-                        vitae fermentum eros dui sit amet ante. Nullam dictum ligula libero, eget imperdiet enim hendrerit id. Duis congue elit eget auctor
-                        pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan metus ligula, a accumsan tellus fermentum sit
-                         amet. Cras id tincidunt mi.
+                        <Lipsum p={1} s={8}/>
 					</AboutSection>
                     <AboutSection name="Mario Feijoo" left={true} profile='images/mario1.jpeg'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus justo efficitur, gravida lorem eget, semper magna.
-                        Maecenas pulvinar felis at eros semper maximus. Pellentesque tincidunt lorem a iaculis faucibus. Ut pellentesque ex in lectus
-                        porta pharetra. Quisque pellentesque justo eu lorem vestibulum, id egestas nulla ultrices. Vivamus pulvinar rutrum tristique.
-                        Vivamus vel tristique mauris, ut pharetra justo. Duis at felis tortor.
-						Aliquam ut libero eu neque malesuada cursus. Suspendisse elementum, odio quis scelerisque commodo, lacus quam vulputate justo,
-                        vitae fermentum eros dui sit amet ante. Nullam dictum ligula libero, eget imperdiet enim hendrerit id. Duis congue elit eget auctor
-                        pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan metus ligula, a accumsan tellus fermentum sit
-                         amet. Cras id tincidunt mi.
+                        <Lipsum p={1} s={8}/>
 					</AboutSection>
                 </Stack>
             </Box>
