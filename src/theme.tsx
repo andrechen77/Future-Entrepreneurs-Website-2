@@ -10,6 +10,26 @@ const theme = createTheme({
 			"Arial",
 			"sans-serif",
 		].join(','),
+		h2: {
+			fontFamily: 'Commissioner',
+			fontSize: 75,
+			letterSpacing: 2.5,
+			fontWeight: "bold",
+			gridArea: "right",
+			paddingBottom: 5
+		},
+		h3: {
+			fontFamily: 'Commissioner',
+			fontSize: 50,
+			letterSpacing: 2.5,
+			fontWeight: "bold",
+			gridArea: "right",
+			paddingBottom: 5
+		},
+		body1 :{
+			fontFamily: 'Commissioner',
+			fontSize: 24,
+		},
 	},
 	palette: {
 		primary: {

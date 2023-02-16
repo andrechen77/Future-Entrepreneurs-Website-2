@@ -1,0 +1,1 @@
+export type LinkData = {label: string, addr?: string};

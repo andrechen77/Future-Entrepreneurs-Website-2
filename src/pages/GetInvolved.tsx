@@ -56,6 +56,7 @@ const GetInvolved = () =>{
                             Lorem ipsum dolor sit amet. consectetur adipiscing elit. 
                             Sed dictum orci ut augue vestibulum vestibulum sed bibendum quam.
                             Maecenas ultricies nulla blandit ex satitis elementum. 
+                            <br></br>
                             <DonatePopup/>
                         </Typography>
                     </Grid>
@@ -69,10 +70,6 @@ const GetInvolved = () =>{
                     </Grid>
                 </Grid>
             </Container>
-            
-            
-            
-            
         </div>
         </Box>
 	);
