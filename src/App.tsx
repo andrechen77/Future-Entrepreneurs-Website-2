@@ -9,7 +9,6 @@ import Contact from './pages/Contact';
 import HomePage from './pages/HomePage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
 function App() {
 	const NavBarLinks = [
 		{label: "About Us", addr: "/AboutUs"},
