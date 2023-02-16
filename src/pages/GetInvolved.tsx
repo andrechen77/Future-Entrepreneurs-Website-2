@@ -10,7 +10,7 @@ const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: theme.palette.secondary.main,
   }));
 
 const GetInvolved = () =>{
@@ -25,28 +25,56 @@ const GetInvolved = () =>{
                 Become a part of the team. Change a life
             </Typography>
 
-            <Typography variant="body1">
+            <Typography align="center" variant="body1">
+                
                 Lorem ipsum dolor sit amet. consectetur adipiscing elit. 
                 Sed dictum orci ut augue vestibulum vestibulum sed bibendum quam.
                 Maecenas ultricies nulla blandit ex satitis elementum. 
+
             </Typography>
 
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={2}>
-                    <Grid item xs={8}>
+            <Container sx={{ flexGrow: 0.1}}>
+                <Grid container spacing={2} justifyContent = 'center'>
+                    <Grid item xs={5}>
                         <Item>
                             <img src='/images/icon.png' alt="Logo" />
                         </Item>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={5}>
                         <Item>
                             <img src='/images/icon.png' alt="Logo" />
                         </Item>
+                    </Grid>
+                    <Grid item xs={5}>
+                        <Typography align="left" variant="h3">
+                            Donate
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={5}>
+                        <Typography align="left" variant="h3">
+                            Volunteer
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={5}>
+                        <Typography align="left" variant="body1">
+                            Lorem ipsum dolor sit amet. consectetur adipiscing elit. 
+                            Sed dictum orci ut augue vestibulum vestibulum sed bibendum quam.
+                            Maecenas ultricies nulla blandit ex satitis elementum. 
+                            <DonatePopup/>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={5}>
+                        <Typography align="left" variant="body1">
+                            Lorem ipsum dolor sit amet. consectetur adipiscing elit. 
+                            Sed dictum orci ut augue vestibulum vestibulum sed bibendum quam.
+                            Maecenas ultricies nulla blandit ex satitis elementum. 
+                            
+                        </Typography>
                     </Grid>
                 </Grid>
-            </Box>
+            </Container>
             
-            <DonatePopup/>
+            
         </div>
         </Box>
 	);
