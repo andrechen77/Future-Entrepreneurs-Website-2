@@ -1,44 +1,58 @@
-import React from 'react';
 import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
-
-export function PopupPrompt() {
+import {Button, Input, Container, FormControl, TextField} from '@mui/material';
+const buttoncss = {
+	margin: 1,
+	padding: 0,
+	backgroundColor: 'primary.main',
+	color: 'primary.dark',
+};
+export function DonatePopup() {
 	return (
-		<div>
-			<Popup trigger=
-				{<button> Donate Here </button>}
-				modal nested>
-				{
-					close => (
-						<div className='modal'>
+		<Popup trigger=
+			{<Button sx={{
+				margin: 3,
+				padding: 1,
+				backgroundColor: 'primary.main',
+				color: 'primary.dark',
+				}} 
+				variant='contained'> 
+				Donate Here 
+			</Button>}
+			modal nested>
+			{
+				close => (
+					<div className='modal'>
+						<Container sx = {{
+								backgroundColor: 'primary.light',
+								buffer: 2,
+								border: 3,
+							}}>
 							<div className='content'>
 								<p>
 									Donate Here: 
 								</p>
-								<button> $10 </button>
-								<button> $25 </button>
-								<button> $50 </button>
-								<button> $100 </button>
-								<button> $250 </button>
-								<button> $1000 </button>
-								<form>
-									<label>
-										Other:
-										<input type="text" name="OtherDonation" />
-									</label>
-									<input type="submit" value="Donate" />
-								</form>
+								<Button sx = {buttoncss}> $10 </Button>
+								<Button sx = {buttoncss}> $25 </Button>
+								<Button sx = {buttoncss}> $50 </Button>
+								<Button sx = {buttoncss}> $100 </Button>
+								<Button sx = {buttoncss}> $250 </Button>
+								<Button sx = {buttoncss}> $1000 </Button>
+								<FormControl>
+									<TextField id="DonationAmount" label="Other: " variant="outlined" />
+									<Input type="submit" value="Donate" sx = {buttoncss}/>
+								</FormControl>
 							</div>
 							<div>
-								<button onClick=
-									{() => close()}>
+								<Button onClick=
+									{() => close()}
+									sx = {buttoncss}>
 										Close
-								</button>
+								</Button>
 							</div>
-						</div>
-					)
-				}
-			</Popup>
-		</div>
+						</Container>
+					</div>
+				)
+			}
+		</Popup>
 	)
 };
