@@ -14,7 +14,7 @@ function NavBar({links}: {links: LinkData[]}) {
 	// }
 
 	return (
-		<Box sx={{ py: 1, px: 3, bgcolor: "primary.main"}} justifyContent="center">
+		<Box sx={{ py: 1, px: 3, bgcolor: "primary.main", color: "common.white" }} justifyContent="center">
 			<Grid
 				container
 				justifyContent="space-between"
@@ -24,7 +24,7 @@ function NavBar({links}: {links: LinkData[]}) {
 					<BigLogo/>
 				</Grid>
 				{collapse && <Grid item>
-					<IconButton onClick={() => setLinksOpen(!linksOpen)}>
+					<IconButton onClick={() => setLinksOpen(!linksOpen)} color="inherit">
 						{linksOpen ? <MenuOpenIcon/> : <MenuIcon/>}
 					</IconButton>
 				</Grid>}
@@ -48,8 +48,8 @@ function NavBarLinks({links}: {links: LinkData[]}) {
 						<Button
 							href={link.addr}
 							variant="text"
-							sx={{color: "common.white"}}
 							size="large"
+							color="inherit"
 						>{link.label}</Button>
 					</Grid>
 				);
