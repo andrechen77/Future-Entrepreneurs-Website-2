@@ -32,7 +32,7 @@ export function Footer({ children }: { children: JSX.Element[]}) {
 function SocialIcon({ imgsrc, handle, href }: { imgsrc: string, handle: string, href: string }) {
 	const sideLength = 20;
 	return (
-		<Stack direction="row" spacing={1}>
+		<Stack direction="row" spacing={1} sx={{ typography: "body2" }}>
 			<img src={imgsrc} width={sideLength} height={sideLength}/>
 			<span>{handle}</span>
 		</Stack>
@@ -47,7 +47,7 @@ export function FooterColumn({ header, links }: { header: string, links: LinkDat
 				return (
 					<Link
 						href={link.addr}
-						sx={{ color: "common.white" }}
+						sx={{ color: "common.white", typography: "button" }}
 					>{link.label}</Link>
 				)
 			})}</>

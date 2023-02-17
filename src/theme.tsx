@@ -22,6 +22,10 @@ const theme = createTheme({
 			fontFamily: 'Commissioner',
 			fontSize: 24,
 		},
+		body2 :{
+			fontFamily: 'Commissioner',
+			fontSize: 18,
+		},
 	},
 	palette: {
 		primary: {
