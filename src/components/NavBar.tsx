@@ -28,7 +28,7 @@ function NavBar({links}: {links: LinkData[]}) {
 						{linksOpen ? <MenuOpenIcon/> : <MenuIcon/>}
 					</IconButton>
 				</Grid>}
-				{!collapse && <Grid item xs={12} md="auto" container alignContent="center">
+				{!collapse && <Grid item xs={12} md="auto">
 					<NavBarLinks links={links}/>
 				</Grid>}
 			</Grid>
@@ -41,7 +41,7 @@ function NavBar({links}: {links: LinkData[]}) {
 
 function NavBarLinks({links}: {links: LinkData[]}) {
 	return (
-		<Stack direction={{ xs: "column", sm: "row" }} spacing={3}>
+		<Grid container spacing={3}>
 			{links.map(link => {
 				return (
 					<Grid item key={link.label} xs="auto">
@@ -54,7 +54,7 @@ function NavBarLinks({links}: {links: LinkData[]}) {
 					</Grid>
 				);
 			})}
-		</Stack>
+		</Grid>
 	);
 }
 
