@@ -1,5 +1,4 @@
-import { Avatar, Grid, Link, Paper, Stack, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import {  Grid, Link, Paper, Stack, Typography } from "@mui/material";
 import { LinkData } from "../types/LinkData";
 import BigLogo from "./BigLogo";
 
@@ -33,7 +32,7 @@ function SocialIcon({ imgsrc, handle, href }: { imgsrc: string, handle: string, 
 	const sideLength = 20;
 	return (
 		<Stack direction="row" spacing={1}>
-			<img src={imgsrc} width={sideLength} height={sideLength}/>
+			<img src={imgsrc} width={sideLength} height={sideLength} alt={handle}/>
 			<span>{handle}</span>
 		</Stack>
 	);
