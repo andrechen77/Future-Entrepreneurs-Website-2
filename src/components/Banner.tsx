@@ -1,4 +1,5 @@
 import { Paper } from "@mui/material";
+import { margin } from "@mui/system";
 
 // const bgImage = {
 // 	backgroundPosition: "center",
@@ -8,7 +9,7 @@ import { Paper } from "@mui/material";
 const bgFull = {
 	backgroundPosition: "center",
 	backgroundSize: "cover",
-	height: 600
+	height: 600,
 };
 const centeredText = {
 	textAlign: "center",

@@ -1,14 +1,14 @@
 // import { ThemeProvider } from '@mui/material/';
-import theme from './../theme';
+
 import { Box, Container, Grid, Typography, TextField} from '@mui/material/';
-import Banner from '../components/Banner';
+import Slider from '../components/Slider'
 
 const HomePage = () => {
 	return (
+
+
         <>
-            <Box>
-                <Banner imgsrc="/images/chicago_skyline.jpg" ht='600px'>Strive for the best.</Banner>
-            </Box>
+        <Slider></Slider>
 
             <Container maxWidth = "sm">
 			<Box style = {{fontSize: 50,
@@ -40,13 +40,7 @@ const HomePage = () => {
                 Entrepreneurs USA was created.
                 <br></br> 
                 <br></br> 
-                {/* <Box style = {{backgroundImage: "/images/homepage.png"}}>
 
-                "Future Entrepreneurs USA is a corporation that teaches hands-on skills to young adults looking to build 
-                their business in a cafe/smoothie shop. Aside from this, we also offer an investment club program, and an 
-                AV space/studio to create marketing pieces."
-                </Box> */}
-                {/* <img src = "/images/homepage.png" width = "100%"></img> */}
                 <div style = {{width: "120%", 
             position: 'relative', 
             marginLeft: -100}}>
@@ -61,12 +55,13 @@ const HomePage = () => {
                 </iframe>
                 <div style = {{width: "120%", 
             position: 'relative', 
-            marginLeft: -100}}>
+            marginLeft: -100, 
+            marginTop: 50}}>
                 <hr></hr>
                 </div>
 
 
-                <Grid container direction="row" alignItems="center">
+                <Grid container direction="row" alignItems="center" marginBottom = {5}>
                     <Grid item style = {{backgroundImage: `url("${"/images/home.png"}")`,
 		width: 650,
 		height: 370,
@@ -105,9 +100,10 @@ const HomePage = () => {
                 <Box sx={{
                 width: '115%',
                 marginLeft: -9,
+                marginTop: 10,
                 alignItems: 'center',
                 height: '300px',
-                backgroundColor: '#465093'
+                backgroundColor: '#002C73ff'
                 }}>
                     <Typography color = "white" fontWeight={'bold'} fontSize = {40}> 
                     Join the FE-USA Community
@@ -136,4 +132,3 @@ const HomePage = () => {
 }
 
 export default HomePage;
-
