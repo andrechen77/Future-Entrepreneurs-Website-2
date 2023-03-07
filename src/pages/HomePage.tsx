@@ -1,14 +1,14 @@
 // import { ThemeProvider } from '@mui/material/';
 
 import { Box, Container, Grid, Typography, TextField} from '@mui/material/';
-import Slider from '../components/Slider'
+// import Slider from '../components/Slider'
 
 const HomePage = () => {
 	return (
 
 
         <>
-        <Slider></Slider>
+        {/* <Slider></Slider> */}
 
             <Container maxWidth = "sm">
 			<Box style = {{fontSize: 50,
