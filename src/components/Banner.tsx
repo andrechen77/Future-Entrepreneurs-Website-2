@@ -1,9 +1,14 @@
 import { Paper } from "@mui/material";
 
-const bgImage = {
+// const bgImage = {
+// 	backgroundPosition: "center",
+// 	backgroundSize: "cover",
+// 	height: 300,
+// };
+const bgFull = {
 	backgroundPosition: "center",
 	backgroundSize: "cover",
-	height: 300,
+	height: 600,
 };
 const centeredText = {
 	textAlign: "center",
@@ -17,12 +22,13 @@ const bannerTextStyle = {
 	fontWeight: 600,
 };
 
-function Banner({imgsrc, children}: {imgsrc: string, children: any}) {
-	const bgImageSrc = {
+function Banner({imgsrc, children, ht }: {imgsrc: string, children: any, ht: string}) {
+	const specific_prop = {
 		backgroundImage: `url("${imgsrc}")`,
+		height: ht
 	};
 	return (
-		<Paper elevation={0} square sx={[bgImage, bgImageSrc, centeredText, bannerTextStyle]}>
+		<Paper elevation={0} square sx={[bannerTextStyle, bgFull, specific_prop, centeredText]}>
 			{children}
 		</Paper>
 	);
