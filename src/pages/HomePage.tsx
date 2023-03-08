@@ -1,14 +1,13 @@
-// import { ThemeProvider } from '@mui/material/';
-
+//import { ThemeProvider } from '@mui/material/';
 import { Box, Container, Grid, Typography, TextField} from '@mui/material/';
-// import Slider from '../components/Slider'
+import Slider from '../components/Slider'
 
 const HomePage = () => {
 	return (
 
 
         <>
-        {/* <Slider></Slider> */}
+        <Slider></Slider>
 
             <Container maxWidth = "sm">
 			<Box style = {{fontSize: 50,
@@ -113,7 +112,7 @@ const HomePage = () => {
                     Sign up with your name and email to receive updates!
                     </Typography>
                     <Box style = {{flexWrap: 'nowrap'}}>
-                    <TextField id="outlined-basic" label="First Name" variant="outlined"  margin = {'none'}/>
+                    <TextField  id="outlined-basic" label="First Name" variant="outlined"  margin = {'none'}/>
                     <TextField id="outlined-basic" label="Last Name" variant="outlined" />
                         <TextField id="outlined-basic" label="Email" variant="outlined" />   
                     </Box> 

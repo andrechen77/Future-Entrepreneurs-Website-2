@@ -1,6 +1,6 @@
 import React from 'react';
-// import Carousel from 'react-material-ui-carousel'
-import { Paper, Button } from '@mui/material'
+import Carousel from 'react-material-ui-carousel'
+//import { Paper, Button } from '@mui/material'
 import Banner from './Banner';
 function Slider(props:any)
 {
@@ -17,13 +17,13 @@ function Slider(props:any)
         }
     ]
 
-    // return (
-    //     <Carousel>
-    //         {
-    //             items.map( (item, i) => <Banner imgsrc={item.name} ht={item.size}>{item.text}</Banner> )
-    //         }
-    //     </Carousel>
-    // )
+    return (
+        <Carousel>
+            {
+                items.map( (item, i) => <Banner imgsrc={item.name} ht={item.size}>{item.text}</Banner> )
+            }
+        </Carousel>
+    )
 }
 
 export default Slider;
