@@ -1,8 +1,7 @@
-//import { ThemeProvider } from '@mui/material/';
-import { Box, Container, Grid, Typography, TextField} from '@mui/material/';
-import Slider from '../components/Slider'
+import { ThemeProvider } from '@mui/material/';
+import theme from './../theme';
 
-const HomePage = () => {
+const HomePage = () =>{
 	return (
 
 
