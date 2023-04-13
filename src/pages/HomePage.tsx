@@ -117,8 +117,6 @@ const HomePage = () => {
                         <TextField id="outlined-basic" label="Email" variant="outlined" />   
                     </Box> 
                         </Box>
-                       
-
                         
                         
                         </p>

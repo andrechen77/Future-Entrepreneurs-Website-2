@@ -3,7 +3,7 @@
 const logoHeight = 80;
 const style = {
 	maxWidth: 300,
-	maxHeight: logoHeight,
+	maxHeight: 200,
 	"&:hover": {
 		maxWidth: 301,
 		maxHeight: logoHeight + 1,
@@ -13,7 +13,7 @@ const style = {
 function BigLogo() {
 	return (
 		<a href="/" onClick={() => console.log("I've been clicked")}>
-			<img css={style} src={"images/logo.png"} alt="logo"/>
+			<img css={style} src={"images/logobetter.png"} alt="logo"/>
 		</a>
 	);
 }
