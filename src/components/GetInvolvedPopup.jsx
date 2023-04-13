@@ -1,5 +1,6 @@
 import Popup from 'reactjs-popup';
 import {Button, Input, FormControl, TextField, Typography, Grid} from '@mui/material';
+import {Link} from 'react-router-dom';
 
 const buttoncss = {
 	margin: 1,
@@ -14,7 +15,7 @@ export function DonatePopup() {
 	return (
 		<Popup trigger=
 			{<Button sx={{
-				margin: 3,
+				margin: 0,
 				padding: 1,
 				backgroundColor: 'primary.main',
 				color: 'primary.light',
@@ -64,4 +65,23 @@ export function DonatePopup() {
 			}
 		</Popup>
 	)
+};
+
+export function VolunteerPopup() {
+	return (
+        <Button
+            component={Link}
+            to={{ pathname: "https://docs.google.com/forms/d/e/1FAIpQLSfyQNNA1YQkGaBwlGf01WQEJCSRvr9K0zzJM9adFHN_yEtJEQ/viewform" }}
+            target="_blank"
+            sx={{
+                margin: 0,
+                padding: 1,
+                backgroundColor: 'primary.main',
+                color: 'primary.light',
+            }}
+            variant="contained"
+        >
+            Volunteer Here
+        </Button>
+    );
 };

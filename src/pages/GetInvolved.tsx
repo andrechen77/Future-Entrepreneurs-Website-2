@@ -1,4 +1,4 @@
-import {DonatePopup} from './../components/GetInvolvedPopup';
+import {DonatePopup, VolunteerPopup} from './../components/GetInvolvedPopup';
 import {Box, Typography, Grid, Paper, styled, Container} from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -56,7 +56,8 @@ const GetInvolved = () =>{
                             Lorem ipsum dolor sit amet. consectetur adipiscing elit. 
                             Sed dictum orci ut augue vestibulum vestibulum sed bibendum quam.
                             Maecenas ultricies nulla blandit ex satitis elementum. 
-                            <br></br>
+                            <br />
+                            <br />
                             <DonatePopup/>
                         </Typography>
                     </Grid>
@@ -64,8 +65,10 @@ const GetInvolved = () =>{
                         <Typography align="left" variant="body1">
                             Lorem ipsum dolor sit amet. consectetur adipiscing elit. 
                             Sed dictum orci ut augue vestibulum vestibulum sed bibendum quam.
-                            Maecenas ultricies nulla blandit ex satitis elementum. 
-                            
+                            Maecenas ultricies nulla blandit ex satitis elementum.
+                            <br />
+                            <br />
+                            <VolunteerPopup/>
                         </Typography>
                     </Grid>
                 </Grid>
