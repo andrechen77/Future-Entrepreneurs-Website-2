@@ -1,7 +1,8 @@
-import { ThemeProvider } from '@mui/material/';
-import theme from './../theme';
+//import { ThemeProvider } from '@mui/material/';
+import { Box, Container, Grid, Typography, TextField} from '@mui/material/';
+import Slider from '../components/Slider'
 
-const HomePage = () =>{
+const HomePage = () => {
 	return (
 
 
@@ -116,6 +117,8 @@ const HomePage = () =>{
                         <TextField id="outlined-basic" label="Email" variant="outlined" />   
                     </Box> 
                         </Box>
+                       
+
                         
                         
                         </p>
