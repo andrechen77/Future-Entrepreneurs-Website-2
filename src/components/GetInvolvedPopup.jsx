@@ -11,7 +11,7 @@ const buttoncss = {
 
 const overlayStyle = { background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(8px)' };
 
-export function DonatePopup() {
+/* export function DonatePopup() {
 	return (
 		<Popup trigger=
 			{<Button sx={{
@@ -65,7 +65,7 @@ export function DonatePopup() {
 			}
 		</Popup>
 	)
-};
+}; */
 
 export function VolunteerPopup() {
 	return (
@@ -80,8 +80,50 @@ export function VolunteerPopup() {
                 color: 'primary.light',
             }}
             variant="contained"
+			
         >
             Volunteer Here
         </Button>
     );
 };
+ 
+
+
+
+
+ 
+export function DonatePopup() {
+    return (
+        <form
+            action="https://www.paypal.com/donate"
+            method="post"
+            target="_top"
+            style={{ display: 'inline-block' }}
+        >
+            <input
+                type="hidden"
+                name="hosted_button_id"
+                value="YESJLWCPP79NJ"
+            />
+            <Button
+                type="submit"
+                sx={{
+                    margin: 0,
+                    padding: 1,
+                    backgroundColor: 'primary.main',
+                    color: 'primary.light',
+                }}
+                variant="contained"
+            >
+                Donate Here
+            </Button>
+            <img
+                alt=""
+                border="0"
+                src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+                width="1"
+                height="1"
+            />
+        </form>
+    );
+}
