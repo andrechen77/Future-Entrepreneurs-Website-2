@@ -5,14 +5,6 @@ import theme from './../theme';
 const Calendar = () =>{
 	return (
 		<ThemeProvider theme={theme}>
-<<<<<<< Updated upstream
-            <div>
-                <h1>
-                    Calendar Page!!!
-                </h1>
-            </div>
-		</ThemeProvider>
-=======
              <Box
                 display="flex"
                 justifyContent="center"
@@ -31,7 +23,6 @@ const Calendar = () =>{
                 
             </Box>
     		</ThemeProvider>
->>>>>>> Stashed changes
 	);
 }
 
