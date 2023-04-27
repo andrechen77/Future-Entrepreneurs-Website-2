@@ -22,7 +22,7 @@ export function Footer({ children }: { children: JSX.Element[]}) {
 					{footerMain}
 				</Grid>
 				<Grid xs={12} md="auto" item container direction="row" wrap="wrap" spacing={3}>
-					{children.map(column => <Grid item>{column}</Grid>)}
+					{children.map((column, index) => <Grid item key={index}>{column}</Grid>)}
 				</Grid>
 			</Grid>
 		</Paper>
@@ -46,6 +46,7 @@ export function FooterColumn({ header, links }: { header: string, links: LinkDat
 			<>{links.map(link => {
 				return (
 					<Link
+						key={link.addr}
 						href={link.addr}
 						sx={{ color: "common.white" }}
 					>{link.label}</Link>

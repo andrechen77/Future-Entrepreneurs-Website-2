@@ -9,19 +9,17 @@ function AboutUs() {
 			<Banner imgsrc="/images/chicago_skyline.jpg">MEET THE TEAM</Banner>
 			<Paper elevation={0} square sx={{typography: "body1", padding: 3}}>
 			</Paper>
-			<Box sx={{padding: 3, bgcolor: "secondary.light"}}>
-				<Stack direction="column" spacing={10}>
-					<AboutSection name="Mario Feijoo" left={true} profile='images/mario1.jpeg'>
-						<Lipsum p={1} s={8}/>
-					</AboutSection>
-					<AboutSection name="Mario Feijoo" left={false} profile='images/mario1.jpeg'>
-						<Lipsum p={1} s={8}/>
-					</AboutSection>
-					<AboutSection name="Mario Feijoo" left={true} profile='images/mario1.jpeg'>
-						<Lipsum p={1} s={8}/>
-					</AboutSection>
-				</Stack>
-			</Box>
+			<Stack direction="column" spacing={10} sx={{padding: 3, bgcolor: "secondary.light"}}>
+				<AboutSection name="Mario Feijoo" left={true} profile='images/mario1.jpeg'>
+					<Lipsum p={1} s={8}/>
+				</AboutSection>
+				<AboutSection name="Mario Feijoo" left={false} profile='images/mario1.jpeg'>
+					<Lipsum p={1} s={8}/>
+				</AboutSection>
+				<AboutSection name="Mario Feijoo" left={true} profile='images/mario1.jpeg'>
+					<Lipsum p={1} s={8}/>
+				</AboutSection>
+			</Stack>
 		</Box>
 	);
 }
