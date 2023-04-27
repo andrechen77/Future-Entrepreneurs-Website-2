@@ -1,16 +1,17 @@
+import { Route, Routes } from "react-router-dom";
 import BlogLanding from "./BlogLanding";
-import { Box } from "@mui/material";
+import BlogPost from "./BlogPost";
+import { usePosts } from "../apis/bloggerApi";
 
 const Blog = () => {
-    return (
-        <BlogLanding/>
-	);
-}
+	const { loading, posts } = usePosts();
 
-function BlogPage(postId: string) {
-    return (
-        <Box>{postId}</Box>
-    )
+	return (
+		<Routes>
+			<Route index element={<BlogLanding posts={posts}/>}/>
+			<Route path=":postId" element={<BlogPost/>}/>
+		</Routes>
+	);
 }
 
 export default Blog;

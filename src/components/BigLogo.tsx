@@ -13,7 +13,7 @@ const style = {
 function BigLogo() {
 	return (
 		<a href="/" onClick={() => console.log("I've been clicked")}>
-			<img css={style} src={"images/logo.png"} alt="logo"/>
+			<img css={style} src={"/images/logo.png"} alt="logo"/>
 		</a>
 	);
 }
