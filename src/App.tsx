@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@mui/material/';
+import { Box, Stack, ThemeProvider } from '@mui/material/';
 import theme from './theme';
 import NavBar from './components/NavBar';
 import AboutUs from './pages/AboutUs';
@@ -23,22 +23,24 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<NavBar links={NavBarLinks}/>
-			<Routes>
-				<Route index  element={<HomePage />} />
-				<Route path='AboutUs'  element={<AboutUs />} />
-				<Route path='Programs'  element={<Programs />} />
-				<Route path='Calendar'  element={<Calendar />} />
-				<Route path='Blog/*'  element={<Blog />} />
-				<Route path='Contact'  element={<Contact />} />
-				<Route path='GetInvolved'  element={<GetInvolved />} />
-			</Routes>
-			<Footer>
-				<FooterColumn header="header here" links={NavBarLinks}/>
-				<FooterColumn header="header here" links={NavBarLinks}/>
-				<FooterColumn header="header here" links={NavBarLinks}/>
-				<FooterColumn header="header here" links={NavBarLinks}/>
-			</Footer>
+			<Stack sx={{ minHeight: "100vh" }} justifyContent="space-between">
+				<NavBar links={NavBarLinks}/>
+				<Routes>
+					<Route index  element={<HomePage />} />
+					<Route path='AboutUs' element={<AboutUs />} />
+					<Route path='Programs' element={<Programs />} />
+					<Route path='Calendar' element={<Calendar />} />
+					<Route path='Blog/*' element={<Blog />} />
+					<Route path='Contact' element={<Contact />} />
+					<Route path='GetInvolved' element={<GetInvolved />} />
+				</Routes>
+				<Footer>
+					<FooterColumn header="header here" links={NavBarLinks}/>
+					<FooterColumn header="header here" links={NavBarLinks}/>
+					<FooterColumn header="header here" links={NavBarLinks}/>
+					<FooterColumn header="header here" links={NavBarLinks}/>
+				</Footer>
+			</Stack>
 		</ThemeProvider>
 	);
 }

@@ -1,6 +1,7 @@
 import { Box, Button, Grid, Stack } from '@mui/material';
 import { LinkData } from "../types/LinkData";
 import BigLogo from './BigLogo';
+import { useNavigate } from 'react-router-dom';
 
 function NavBar({links}: {links: LinkData[]}) {
 	return (
@@ -22,13 +23,15 @@ function NavBar({links}: {links: LinkData[]}) {
 }
 
 function NavBarLinks({links}: {links: LinkData[]}) {
+	const navigate = useNavigate();
+
 	return (
 		<Stack direction={{ xs: "column", md: "row" }} spacing={3}>
 			{links.map(link => {
 				return (
 					<Grid item key={link.label} xs="auto">
 						<Button
-							href={link.addr}
+							onClick={() => navigate(link.addr ?? "")}
 							variant="text"
 							sx={{color: "common.white"}}
 							size="large"

@@ -1,26 +1,39 @@
-import { Box, CircularProgress, Paper, Typography } from "@mui/material";
+import { Box, Container, Skeleton, Typography } from "@mui/material";
 import { usePost } from "../apis/bloggerApi";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function BlogPost() {
 	const postId = useParams().postId ?? "";
 	const { loading, post } = usePost(postId);
 
 	return (
-		loading ? (
-			<Box>
-				LOADING
-				<CircularProgress/>
-			</Box>
-		) : post === null ? (
-			<Box>
-				POST NOT FOUND :(
-			</Box>
-		) : (
-			<Paper elevation={1} sx={{ p: 2, boxShadow: 3, borderRadius: '16px' }}>
-				<Typography variant="h3">{post.title}</Typography>
-				<Box dangerouslySetInnerHTML={{ __html: post.content }}></Box>
-			</Paper>
-		)
+		<Container>
+			{!loading && post === null ? (
+				<Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+					<Typography variant="h1">Post not found :(</Typography>
+					<Link to="../"><Typography variant="h6">return to blog instead?</Typography></Link>
+				</Box>
+			) : (
+				<>
+					<Typography variant="h3" sx={{ py: 3 }}>
+						{loading ? <Skeleton variant="text"/> : post!.title}
+					</Typography>
+					<Box sx={{ typography: "body1" }}>
+						{loading ? (
+							<>
+								<Skeleton variant="rectangular" height={500}/>
+								<Skeleton variant="text"/>
+								<Skeleton variant="text"/>
+								<Skeleton variant="text"/>
+								<Skeleton variant="text"/>
+								<Skeleton variant="text"/>
+							</>
+						) : (
+							<div dangerouslySetInnerHTML={{ __html: post!.content }}/>
+						)}
+					</Box>
+				</>
+			)}
+		</Container>
 	);
 }

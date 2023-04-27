@@ -2,6 +2,7 @@ import { Avatar, Grid, Link, Paper, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { LinkData } from "../types/LinkData";
 import BigLogo from "./BigLogo";
+import { useNavigate } from "react-router-dom";
 
 export function Footer({ children }: { children: JSX.Element[]}) {
 	const footerMain = (
@@ -40,6 +41,8 @@ function SocialIcon({ imgsrc, handle, href }: { imgsrc: string, handle: string, 
 }
 
 export function FooterColumn({ header, links }: { header: string, links: LinkData[] }) {
+	const navigate = useNavigate();
+
 	return (
 		<Stack direction="column">
 			<Typography variant="h6">{header}</Typography>
@@ -47,8 +50,8 @@ export function FooterColumn({ header, links }: { header: string, links: LinkDat
 				return (
 					<Link
 						key={link.addr}
-						href={link.addr}
-						sx={{ color: "common.white" }}
+						onClick={() => navigate(link.addr ?? "")}
+						sx={{ color: "common.white", cursor: "pointer" }}
 					>{link.label}</Link>
 				)
 			})}</>
