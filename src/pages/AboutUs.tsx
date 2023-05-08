@@ -5,7 +5,7 @@ import Banner from '../components/Banner';
 function AboutUs() {
 	return (
 		<Box>
-			<Banner imgsrc="/images/chicago_skyline.jpg" ht= "300px">MEET THE TEAM</Banner>
+			<Banner imgsrc="/images/chicago_skyline.jpg" ht={300}>MEET THE TEAM</Banner>
 			<Paper elevation={0} square sx={{typography: "body1", padding: 3}}>
 			</Paper>
 			<Box sx={{padding: 3, bgcolor: "secondary.light"}}>

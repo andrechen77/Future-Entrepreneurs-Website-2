@@ -4,6 +4,7 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import { useState } from 'react';
 import { LinkData } from "../types/LinkData";
 import BigLogo from './BigLogo';
+import { useNavigate } from 'react-router-dom';
 
 function NavBar({links}: {links: LinkData[]}) {
 	const theme = useTheme();
@@ -37,13 +38,15 @@ function NavBar({links}: {links: LinkData[]}) {
 }
 
 function NavBarLinks({links}: {links: LinkData[]}) {
+	const navigate = useNavigate();
+
 	return (
 		<Grid container spacing={3}>
 			{links.map(link => {
 				return (
 					<Grid item key={link.label} xs="auto">
 						<Button
-							href={link.addr}
+							onClick={() => navigate(link.addr ?? "")}
 							variant="text"
 							size="large"
 							color="inherit"

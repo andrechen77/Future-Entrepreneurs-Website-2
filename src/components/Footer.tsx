@@ -1,4 +1,5 @@
-import { Grid, Link, Paper, Stack, Typography } from "@mui/material";
+import { Grid, Link as MuiLink, Paper, Stack, Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { LinkData } from "../types/LinkData";
@@ -45,7 +46,7 @@ export function Footer({ children }: { children: JSX.Element[]}) {
 					{footerMain}
 				</Grid>
 				<Grid xs={12} md="auto" item container direction="row" wrap="wrap" spacing={3}>
-					{children.map(column => <Grid item>{column}</Grid>)}
+					{children.map((column, index) => <Grid item key={index}>{column}</Grid>)}
 				</Grid>
 			</Grid>
 		</Paper>
@@ -75,10 +76,12 @@ export function FooterColumn({ header, links }: { header: string, links: LinkDat
 			<Typography variant="h6">{header}</Typography>
 			<>{links.map(link => {
 				return (
-					<Link
-						href={link.addr}
+					<MuiLink
+						key={link.addr}
+						component={RouterLink}
+						to={link.addr ?? ""}
 						sx={{ typography: "body2", color: "common.white" }}
-					>{link.label}</Link>
+					>{link.label}</MuiLink>
 				)
 			})}</>
 		</Stack>

@@ -1,6 +1,6 @@
-import { ThemeProvider } from "@mui/material";
+// Do we understand how this mstery Faq component works? How can we elegantly get it to follow the
+// website theme? - Andre
 import Faq from "react-faq-component";
-import theme from './../theme';
 
 const data = {
     title: "FAQ",
@@ -46,18 +46,12 @@ const config = {
 };
 
 function FAQ () {
-
     return (
-        <div>
-            <ThemeProvider theme={theme}>
-            <Faq
-                data={data}
-                styles={styles}
-                config={config}
-            />
-            </ThemeProvider>
-
-        </div>
+        <Faq
+            data={data}
+            styles={styles}
+            config={config}
+        />
     );
 }
 
