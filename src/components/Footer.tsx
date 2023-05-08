@@ -1,5 +1,7 @@
 import { Avatar, Grid, Link, Paper, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 import { LinkData } from "../types/LinkData";
 import BigLogo from "./BigLogo";
 
@@ -8,9 +10,31 @@ export function Footer({ children }: { children: JSX.Element[]}) {
 		<Stack direction="column" spacing={3}>
 			<BigLogo/>
 			<Stack direction="column" spacing={3}>
-				<SocialIcon imgsrc="/images/icon.png" handle="FOLLOW ME" href=""/>
-				<SocialIcon imgsrc="/images/icon.png" handle="FOLLOW ME" href=""/>
-				<SocialIcon imgsrc="/images/icon.png" handle="FOLLOW ME" href=""/>
+				<SocialIcon
+					img="/images/socials/instagram.svg"
+					handle="futureentrepreneur_"
+					href="https://www.instagram.com/futureentrepreneur_/"
+				/>
+				<SocialIcon
+					img="/images/socials/linkedin.png"
+					handle="LinkedIn"
+					href="https://www.linkedin.com/company/future-entrepreneurs-usa/?viewAsMember=true"
+				/>
+				<SocialIcon
+					img="/images/socials/tiktok.png"
+					handle="@futureentrepreneruship"
+					href="https://www.tiktok.com/@futureentrepreneruship"
+				/>
+				<SocialIcon
+					img={<EmailIcon/>}
+					handle="futureentreprenuersusa@gmail.com"
+					href="mailto:futureentreprenuersusa@gmail.com"
+				/>
+				<SocialIcon
+					img={<PhoneIcon/>}
+					handle="847-833-8822"
+					href={null}
+				/>
 			</Stack>
 		</Stack>
 	)
@@ -29,11 +53,18 @@ export function Footer({ children }: { children: JSX.Element[]}) {
 	);
 }
 
-function SocialIcon({ imgsrc, handle, href }: { imgsrc: string, handle: string, href: string }) {
-	const sideLength = 20;
+function SocialIcon({ img, handle, href }: { img: string | JSX.Element, handle: string, href: string | null }) {
+	const clickable = href !== null;
+
 	return (
-		<Stack direction="row" spacing={1}>
-			<img src={imgsrc} width={sideLength} height={sideLength}/>
+		<Stack
+			direction="row"
+			spacing={1}
+			alignItems="center"
+			onClick={clickable ? () => window.open(href, "_blank") : undefined}
+			sx={[{ typography: "body1" }, clickable ? { cursor: "pointer" } : {}]}
+		>
+			{typeof img === "string" ? <img src={img} height={30}/> : img}
 			<span>{handle}</span>
 		</Stack>
 	);
