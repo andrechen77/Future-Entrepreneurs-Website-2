@@ -62,10 +62,10 @@ function SocialIcon({ img, handle, href }: { img: string | JSX.Element, handle: 
 			spacing={1}
 			alignItems="center"
 			onClick={clickable ? () => window.open(href, "_blank") : undefined}
-			sx={[{ typography: "body2" }, clickable ? { cursor: "pointer" } : {}]}
+			sx={clickable ? { cursor: "pointer" } : {}}
 		>
 			{typeof img === "string" ? <img src={img} height={30}/> : img}
-			<span>{handle}</span>
+			<Typography variant="body2">{handle}</Typography>
 		</Stack>
 	);
 }
