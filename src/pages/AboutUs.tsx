@@ -1,7 +1,6 @@
 import { Box, Paper, Stack } from '@mui/material/';
 import AboutSection from '../components/AboutSection';
 import Banner from '../components/Banner';
-import Lipsum from '../components/Lipsum';
 
 function AboutUs() {
 	return (

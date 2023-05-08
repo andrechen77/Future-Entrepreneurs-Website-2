@@ -1,5 +1,4 @@
-import { Avatar, Grid, Link, Paper, Stack, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Grid, Link, Paper, Stack, Typography } from "@mui/material";
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { LinkData } from "../types/LinkData";
@@ -64,7 +63,7 @@ function SocialIcon({ img, handle, href }: { img: string | JSX.Element, handle: 
 			onClick={clickable ? () => window.open(href, "_blank") : undefined}
 			sx={clickable ? { cursor: "pointer" } : {}}
 		>
-			{typeof img === "string" ? <img src={img} height={30}/> : img}
+			{typeof img === "string" ? <img src={img} alt={handle} height={30}/> : img}
 			<Typography variant="body2">{handle}</Typography>
 		</Stack>
 	);

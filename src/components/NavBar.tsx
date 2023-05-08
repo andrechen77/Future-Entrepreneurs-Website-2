@@ -1,4 +1,4 @@
-import { Box, Button, Collapse, Grid, IconButton, Paper, Stack, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, Collapse, Grid, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import { useState } from 'react';

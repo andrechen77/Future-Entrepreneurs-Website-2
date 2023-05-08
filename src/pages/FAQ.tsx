@@ -1,5 +1,4 @@
 import { ThemeProvider } from "@mui/material";
-import React, { useEffect, useState } from "react";
 import Faq from "react-faq-component";
 import theme from './../theme';
 
@@ -57,7 +56,7 @@ function FAQ () {
                 config={config}
             />
             </ThemeProvider>
-            
+
         </div>
     );
 }
