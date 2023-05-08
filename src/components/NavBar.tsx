@@ -7,11 +7,8 @@ import BigLogo from './BigLogo';
 
 function NavBar({links}: {links: LinkData[]}) {
 	const theme = useTheme();
-	const collapse = useMediaQuery(theme.breakpoints.down("md"));
+	const collapse = useMediaQuery(theme.breakpoints.down("lg"));
 	const [linksOpen, setLinksOpen] = useState(false);
-	// if (!collapse) {
-	// 	setLinksOpen(false);
-	// }
 
 	return (
 		<Box sx={{ py: 1, px: 3, bgcolor: "primary.main", color: "common.white" }} justifyContent="center">
