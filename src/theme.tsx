@@ -1,5 +1,20 @@
 import { createTheme } from "@mui/material/styles";
 
+declare module "@mui/material/styles" {
+	interface TypographyVariants {
+		imgOverlay: React.CSSProperties;
+	}
+
+	interface TypographyVariantsOptions {
+		imgOverlay?: React.CSSProperties;
+	}
+}
+declare module "@mui/material/Typography" {
+	interface TypographyPropsVariantOverrides {
+		imgOverlay: true;
+	}
+}
+
 const theme = createTheme({
 	typography: {
 		fontFamily: [
@@ -9,26 +24,36 @@ const theme = createTheme({
 			"Times New Roman",
 			"Arial",
 			"sans-serif",
-		].join(','),
+		].join(","),
 		h2: {
-			fontFamily: 'Commissioner',
+			fontFamily: "Commissioner",
 			fontSize: 75,
 			letterSpacing: 2.5,
 			fontWeight: "bold",
 			gridArea: "right",
-			paddingBottom: 5
+			paddingBottom: 5,
 		},
 		h3: {
-			fontFamily: 'Commissioner',
+			fontFamily: "Commissioner",
 			fontSize: 50,
 			letterSpacing: 2.5,
 			fontWeight: "bold",
 			gridArea: "right",
-			paddingBottom: 5
+			paddingBottom: 5,
 		},
-		body1 :{
-			fontFamily: 'Commissioner',
+		body1: {
+			fontFamily: "Commissioner",
 			fontSize: 24,
+		},
+		imgOverlay: {
+			fontFamily: "Commissioner",
+			fontSize: 75,
+			letterSpacing: 2.5,
+			fontWeight: "bold",
+			gridArea: "right",
+			paddingBottom: 0,
+			color: "white",
+			textShadow: "0px 0px 10px black"
 		},
 	},
 	palette: {

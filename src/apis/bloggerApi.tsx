@@ -24,7 +24,7 @@ const defaultImageSrc = "/images/chicago_skyline.jpg";
 
 export function usePosts(): { loading: boolean, posts: BlogPost[] } {
 	const [posts, setPosts] = useState<BlogPost[]>([]);
-	const [loading, setLoading] = useState(false);
+	const [loading, setLoading] = useState(true);
 
 	const getPosts = async () => {
 		setLoading(true);
@@ -49,7 +49,7 @@ export function usePosts(): { loading: boolean, posts: BlogPost[] } {
 
 export function usePost(postId: string) : { loading: boolean, post: BlogPost | null } {
 	const [post, setPost] = useState<BlogPost | null>(null);
-	const [loading, setLoading] = useState(false);
+	const [loading, setLoading] = useState(true);
 
 	const getPost = async (postId: string) => {
 		setLoading(true);

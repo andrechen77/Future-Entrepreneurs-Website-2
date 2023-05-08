@@ -1,15 +1,19 @@
 import { Box, Container, Skeleton, Typography } from "@mui/material";
 import { usePost } from "../apis/bloggerApi";
 import { Link, useParams } from "react-router-dom";
+import { centeredColumn } from "../common_styles";
+import { useEffect } from "react";
 
 export default function BlogPost() {
 	const postId = useParams().postId ?? "";
 	const { loading, post } = usePost(postId);
 
+	useEffect(() => window.scrollTo(0, 0), []);
+
 	return (
 		<Container>
 			{!loading && post === null ? (
-				<Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+				<Box sx={centeredColumn}>
 					<Typography variant="h1">Post not found :(</Typography>
 					<Link to="../"><Typography variant="h6">return to blog instead?</Typography></Link>
 				</Box>

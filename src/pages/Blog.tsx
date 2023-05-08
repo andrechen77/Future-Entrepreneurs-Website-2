@@ -8,7 +8,7 @@ const Blog = () => {
 
 	return (
 		<Routes>
-			<Route index element={<BlogLanding posts={posts}/>}/>
+			<Route index element={<BlogLanding loading={loading} posts={posts}/>}/>
 			<Route path=":postId" element={<BlogPost/>}/>
 		</Routes>
 	);
