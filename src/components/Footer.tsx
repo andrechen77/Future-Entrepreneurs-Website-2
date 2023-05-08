@@ -1,17 +1,40 @@
-import { Avatar, Grid, Link, Paper, Stack, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Grid, Link as MuiLink, Paper, Stack, Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
 import { LinkData } from "../types/LinkData";
 import BigLogo from "./BigLogo";
-import { useNavigate } from "react-router-dom";
 
 export function Footer({ children }: { children: JSX.Element[]}) {
 	const footerMain = (
 		<Stack direction="column" spacing={3}>
 			<BigLogo/>
 			<Stack direction="column" spacing={3}>
-				<SocialIcon imgsrc="/images/icon.png" handle="FOLLOW ME" href=""/>
-				<SocialIcon imgsrc="/images/icon.png" handle="FOLLOW ME" href=""/>
-				<SocialIcon imgsrc="/images/icon.png" handle="FOLLOW ME" href=""/>
+				<SocialIcon
+					img="/images/socials/instagram.svg"
+					handle="futureentrepreneur_"
+					href="https://www.instagram.com/futureentrepreneur_/"
+				/>
+				<SocialIcon
+					img="/images/socials/linkedin.png"
+					handle="LinkedIn"
+					href="https://www.linkedin.com/company/future-entrepreneurs-usa/?viewAsMember=true"
+				/>
+				<SocialIcon
+					img="/images/socials/tiktok.png"
+					handle="@futureentrepreneruship"
+					href="https://www.tiktok.com/@futureentrepreneruship"
+				/>
+				<SocialIcon
+					img={<EmailIcon/>}
+					handle="futureentreprenuersusa@gmail.com"
+					href="mailto:futureentreprenuersusa@gmail.com"
+				/>
+				<SocialIcon
+					img={<PhoneIcon/>}
+					handle="847-833-8822"
+					href={null}
+				/>
 			</Stack>
 		</Stack>
 	)
@@ -30,29 +53,35 @@ export function Footer({ children }: { children: JSX.Element[]}) {
 	);
 }
 
-function SocialIcon({ imgsrc, handle, href }: { imgsrc: string, handle: string, href: string }) {
-	const sideLength = 20;
+function SocialIcon({ img, handle, href }: { img: string | JSX.Element, handle: string, href: string | null }) {
+	const clickable = href !== null;
+
 	return (
-		<Stack direction="row" spacing={1}>
-			<img src={imgsrc} width={sideLength} height={sideLength}/>
-			<span>{handle}</span>
+		<Stack
+			direction="row"
+			spacing={1}
+			alignItems="center"
+			onClick={clickable ? () => window.open(href, "_blank") : undefined}
+			sx={clickable ? { cursor: "pointer" } : {}}
+		>
+			{typeof img === "string" ? <img src={img} alt={handle} height={30}/> : img}
+			<Typography variant="body2">{handle}</Typography>
 		</Stack>
 	);
 }
 
 export function FooterColumn({ header, links }: { header: string, links: LinkData[] }) {
-	const navigate = useNavigate();
-
 	return (
 		<Stack direction="column">
 			<Typography variant="h6">{header}</Typography>
 			<>{links.map(link => {
 				return (
-					<Link
+					<MuiLink
 						key={link.addr}
-						onClick={() => navigate(link.addr ?? "")}
-						sx={{ color: "common.white", cursor: "pointer" }}
-					>{link.label}</Link>
+						component={RouterLink}
+						to={link.addr ?? ""}
+						sx={{ typography: "body2", color: "common.white" }}
+					>{link.label}</MuiLink>
 				)
 			})}</>
 		</Stack>
