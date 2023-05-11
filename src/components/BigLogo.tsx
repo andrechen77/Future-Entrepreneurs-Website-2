@@ -1,12 +1,9 @@
-const style = {
-	maxWidth: 300,
-	maxHeight: 200,
-};
+/** @jsxImportSource @emotion/react */
 
 function BigLogo() {
 	return (
 		<a href="/" onClick={() => console.log("I've been clicked")}>
-			<img style={style} src={"images/logobetter.png"} alt="logo"/>
+			<img css={{ maxHeight: 80 }} src={"images/logo.png"} alt="logo"/>
 		</a>
 	);
 }

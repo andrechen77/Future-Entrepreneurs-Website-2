@@ -82,7 +82,7 @@ export function FooterColumn({ header, links }: { header: string, links: LinkDat
 						to={link.addr ?? ""}
 						sx={{ typography: "body2", color: "common.white" }}
 					>{link.label}</MuiLink>
-				)
+				);
 			})}</>
 		</Stack>
 	);
