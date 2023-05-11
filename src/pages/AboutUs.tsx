@@ -6,9 +6,9 @@ function AboutUs() {
 	return (
 		<Box>
 			<Banner imgsrc="/images/chicago_skyline.jpg" ht={300}>MEET THE TEAM</Banner>
-			<Paper elevation={0} square sx={{typography: "body1", padding: 3}}>
+			<Paper elevation={0} square sx={{typography: "body1", p: 3}}>
 			</Paper>
-			<Box sx={{padding: 3, bgcolor: "secondary.light"}}>
+			<Box sx={{ p: 3 }}>
 				<Stack direction="column" spacing={10}>
 					<AboutSection name="Sofia Feijoo" left={false} profile="/images/profiles/sofia_feijoo.jpg">
 						Sofia Feijoo currently attends DePaul University and is studying Entrepreneurship and Management in the Driehaus College of Business. Sofia has been involved with many startups over the last few years, including a student networking app called StudyBuddy and a sustainable fashion company called Clueless Closet. Sofia has a passion for entrepreneurship and is dedicated to helping students become inspired and learn the ins and outs of the business world.
