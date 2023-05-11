@@ -36,7 +36,7 @@ const GetInvolved = () =>{
                             Volunteer
                         </Typography>
                     </Grid>
-                    <Grid item xs={5} >
+                    <Grid item xs={5} sx={{padding:2}}>
                         <Typography align="left" variant="body1">
                             
                             
@@ -44,14 +44,14 @@ const GetInvolved = () =>{
                             Welcome to our non-profit organization's donation page! Your contribution can make a real difference in the lives of the people we serve. Whether you are donating for the first time or have been a long-time supporter, we thank you for considering our cause. Your donation will help us continue to provide vital services and programs that directly impact the lives of those in need. From funding research to providing basic necessities, your generosity will help us make a positive impact in the world. With your support, we can create lasting change and help those in need reach their full potential. Thank you for being a part of our mission and helping us make a difference.
                             <br />
                             <br />
-                            Future Entrepreneurs is a Section 501(c) (3) charitable organization, EIN 56-2430722. All donations are deemed tax-deductible absent any limitations on deductibility applicable to a particular taxpayer. No goods or services were provided in exchange for your contribution.
+                            Future Entrepreneurs is a Section 501(c) (3) charitable organization, EIN WEDONTHAVETHIS. All donations are deemed tax-deductible absent any limitations on deductibility applicable to a particular taxpayer. No goods or services were provided in exchange for your contribution.
  
                             <br />
                             <br />
                             <DonatePopup/>
                         </Typography>
                     </Grid>
-                    <Grid item xs={5}>
+                    <Grid item xs={5} sx={{padding:2}}>
                         <Typography align="left" variant="body1">
                             We at Future Entrepreneurs are looking for volunteers, mentors, and coaches to help develop programs and workshops for students ages 14 to 22 years old. 
                             <br />
