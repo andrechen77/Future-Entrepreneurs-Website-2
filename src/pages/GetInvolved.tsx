@@ -18,25 +18,19 @@ const GetInvolved = () =>{
             <Typography align="center" variant="body1" sx={{padding:3}}>
             </Typography>
 
-            <Container sx={{ flexGrow: 0.1}}>
+            <Container sx={{ padding:1}}>
                 <Grid container spacing={2} justifyContent = 'center'>
-                    <Grid item xs={5} sx={{padding:2}}>
+                    <Grid item xs={-10} sx={{padding:0}}>
                             <img src='/images/icon.png' alt="Logo" />
                     </Grid>
-                    <Grid item xs={5} >
-                            <img src='/images/icon.png' alt="Logo" />
-                    </Grid>
-                    <Grid item xs={5} >
+                    
+                    <Grid item xs={15} sx={{padding:0}}>
                         <Typography align="left" variant="h3">
                             Donate
                         </Typography>
                     </Grid>
-                    <Grid item xs={5} >
-                        <Typography align="left" variant="h3">
-                            Volunteer
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={5} sx={{padding:2}}>
+
+                    <Grid item xs={0} sx={{padding:5}}>
                         <Typography align="left" variant="body1">
                             
                             
@@ -51,9 +45,18 @@ const GetInvolved = () =>{
                             <DonatePopup/>
                         </Typography>
                     </Grid>
-                    <Grid item xs={5} sx={{padding:2}}>
+                    <Grid item xs={-10} sx={{padding:0}}>
+                            <img src='/images/icon.png' alt="Logo" />
+                    </Grid>
+                    <Grid item xs={15} sx={{padding:0}}>
+                        <Typography align="left" variant="h3">
+                            Volunteer
+                        </Typography>
+                    </Grid>                    
+                    <Grid item xs={0} sx={{padding:5}}>
                         <Typography align="left" variant="body1">
                             We at Future Entrepreneurs are looking for volunteers, mentors, and coaches to help develop programs and workshops for students ages 14 to 22 years old. 
+                            <br />
                             <br />
                             We are looking for:
                             <Typography component="div">
@@ -70,7 +73,6 @@ const GetInvolved = () =>{
                             <br />
                             <br />
                             If you are interested in volunteering, please fill out the form below and we will get back to you through email. 
- 
                             <br />
                             <br />
                             <VolunteerPopup/>
