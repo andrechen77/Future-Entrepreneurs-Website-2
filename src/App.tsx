@@ -21,6 +21,10 @@ function App() {
 		{label: "FAQ", addr: "/faq"}
 
 	];
+	const empty = [
+		{label: "", addr: ""},
+
+	];
 
 	return (
 		<ThemeProvider theme={theme}>
@@ -36,10 +40,8 @@ function App() {
 					<Route path='faq' element={<FAQ/>}/>
 				</Routes>
 				<Footer>
-					<FooterColumn header="header here" links={NavBarLinks}/>
-					<FooterColumn header="header here" links={NavBarLinks}/>
-					<FooterColumn header="header here" links={NavBarLinks}/>
-					<FooterColumn header="header here" links={NavBarLinks}/>
+					<FooterColumn header="Our Pages" links={NavBarLinks}/>
+					<FooterColumn header="" links={empty}/>
 				</Footer>
 			</Stack>
 		</ThemeProvider>
