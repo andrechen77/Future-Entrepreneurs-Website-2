@@ -35,12 +35,9 @@ function App() {
 					<Route path='GetInvolved' element={<GetInvolved />} />
 					<Route path='faq' element={<FAQ/>}/>
 				</Routes>
-				<Footer>
-					<FooterColumn header="header here" links={NavBarLinks}/>
-					<FooterColumn header="header here" links={NavBarLinks}/>
-					<FooterColumn header="header here" links={NavBarLinks}/>
-					<FooterColumn header="header here" links={NavBarLinks}/>
-				</Footer>
+				<Footer>{[
+					<FooterColumn header="Our Pages" links={NavBarLinks}/>
+				]}</Footer>
 			</Stack>
 		</ThemeProvider>
 	);

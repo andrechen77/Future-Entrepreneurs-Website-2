@@ -1,10 +1,12 @@
+/** @jsxImportSource @emotion/react */
+
 import { Box, Button, Collapse, Grid, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import { useState } from 'react';
 import { LinkData } from "../types/LinkData";
 import BigLogo from './BigLogo';
-import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function NavBar({links}: {links: LinkData[]}) {
 	const theme = useTheme();
@@ -38,19 +40,25 @@ function NavBar({links}: {links: LinkData[]}) {
 }
 
 function NavBarLinks({links}: {links: LinkData[]}) {
-	const navigate = useNavigate();
-
 	return (
 		<Grid container spacing={3}>
 			{links.map(link => {
 				return (
 					<Grid item key={link.label} xs="auto">
-						<Button
-							onClick={() => navigate(link.addr ?? "")}
-							variant="text"
-							size="large"
-							color="inherit"
-						>{link.label}</Button>
+						<NavLink
+							to={link.addr ?? ""}
+						>
+							{({ isActive }) => (
+								<Button
+									color={isActive ? "secondary" : "primary"}
+									variant="contained"
+									disableElevation={!isActive}
+									size="large"
+								>
+									{link.label}
+								</Button>
+							)}
+						</NavLink>
 					</Grid>
 				);
 			})}

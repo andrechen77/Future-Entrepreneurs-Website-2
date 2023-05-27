@@ -1,0 +1,20 @@
+.faq-style-wrapper {
+    font-family: 'Roboto';
+    font-weight: 500;
+    padding: 25px;
+}
+
+.faq-style-wrapper .row-title {
+    color: #062d7d !important;
+}
+.faq-style-wrapper .faq-body .faq-row {
+    padding: 0.75em 0;
+}
+
+.faq-style-wrapper .faq-body .faq-row .row-content-text {
+    padding: 2em !important;
+    font-size: medium !important;
+
+}
+
+.title-statement {}

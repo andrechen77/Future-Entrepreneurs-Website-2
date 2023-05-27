@@ -3,6 +3,7 @@
 //import { ThemeProvider } from '@mui/material/';
 import { Box, Container, Grid, Typography, TextField} from '@mui/material/';
 import Slider from '../components/Slider'
+import "./FAQ.css"
 
 const HomePage = () => {
 	return (
@@ -15,8 +16,9 @@ const HomePage = () => {
 			<Box style = {{fontSize: 50,
 			textAlign: 'center',
 			fontWeight: 'bold',
-            marginTop: 120,
-            marginBottom: 70}}>
+            marginTop: 60,
+            marginBottom: 30,
+            fontFamily: 'Archivo' }}>
 			Our Mission
 			</Box>
             </Container>
@@ -24,9 +26,11 @@ const HomePage = () => {
             <Container sx={{ maxWidth:'60%', position: 'center'}} maxWidth={false} >
             <p style = {{
 					fontSize: 30,
-					fontWeight: 'normal',
+					fontWeight: "500",
 					textAlign: 'center',
-				}}> Our mission is to create an educational environment that provides opportunities and empowers
+                    fontFamily: "Open Sans",
+
+				}}> At Future Entrepreneurs, we wish to create an educational environment that provides opportunities and empowers
                 young adults to learn business skills through both hands-on experience and training lessons.
                 We plan to provide youth with resources that will increase their chances of achieving success
                 in their business.
