@@ -21,10 +21,6 @@ function App() {
 		{label: "FAQ", addr: "/faq"}
 
 	];
-	const empty = [
-		{label: "", addr: ""},
-
-	];
 
 	return (
 		<ThemeProvider theme={theme}>
@@ -39,10 +35,9 @@ function App() {
 					<Route path='GetInvolved' element={<GetInvolved />} />
 					<Route path='faq' element={<FAQ/>}/>
 				</Routes>
-				<Footer>
+				<Footer>{[
 					<FooterColumn header="Our Pages" links={NavBarLinks}/>
-					<FooterColumn header="" links={empty}/>
-				</Footer>
+				]}</Footer>
 			</Stack>
 		</ThemeProvider>
 	);
