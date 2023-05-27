@@ -3,7 +3,7 @@
 import Faq from "react-faq-component";
 import "./FAQ.css";
 import Banner from '../components/Banner';
-import { Box, Paper, Stack } from '@mui/material/';
+import { Paper } from '@mui/material/';
 
 const data = {
     // title: "FAQ",
@@ -29,7 +29,6 @@ const data = {
             title: "Who will be leading the workshops and courses at Future Entrepreneurs USA?",
             content: "The Executive Director Mario Feijoo will be in charge of coordinating all workshops, classes, and seminars. Business owners and professionals in their field of expertise will also be leading sessions for young adults.  ",
         },
-
     ],
 };
 
@@ -47,24 +46,22 @@ const styles = {
 };
 
 const config = {
-     animate: true,
-    // arrowIcon: "V",
-    // tabFocus: true
+    animate: true,
+    arrowIcon: "V",
+    tabFocus: false,
 };
 
-function FAQ () {
+function FAQ() {
     return (
-
         <div>
 		    <Banner imgsrc="/images/chicago_skyline.jpg" ht={300}>Frequently Asked Questions</Banner>
             <Paper elevation={5} sx={{ boxShadow: 3 }}>
             <div className="faq-style-wrapper">
-            <Faq
-                data={data}
-                styles={styles}
-
-            />
-
+                <Faq
+                    data={data}
+                    styles={styles}
+                    config={config}
+                />
             </div>
             </Paper>
         </div>
