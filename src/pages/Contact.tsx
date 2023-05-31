@@ -9,17 +9,20 @@ const Contact = () => {
 
 	const handleSubmission = () => {
 		console.log(`${name} sent a message with email ${email}:\n${message}`)
-		// TODO
+		window.open(`mailto:info@reusanfp.com?subject=Message from ${encodeURIComponent(name)} at ${encodeURIComponent(email)}&body=${encodeURIComponent(message)}`);
 	};
 
 	const emailForm = (
 		<Box>
-			<Typography variant="h3" sx={{ my: 1 }}>Send us an email</Typography>
+			<Typography variant="h3" sx={{ my: 1 }}>Send us a message</Typography>
 			<Stack spacing={1} alignItems="center">
 				<TextField label="Name" fullWidth value={name} onChange={e => setName(e.target.value)}/>
 				<TextField label="Email Address" fullWidth value={email} onChange={e => setEmail(e.target.value)}/>
 				<TextField label="Message" fullWidth multiline rows={7} value={message} onChange={e => setMessage(e.target.value)}/>
 				<Button variant="contained" onClick={handleSubmission}>Submit</Button>
+				<Typography variant="body3">
+					At the moment, this form just uses your standard mail client.
+				</Typography>
 			</Stack>
 		</Box>
 	);
