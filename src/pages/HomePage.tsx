@@ -1,3 +1,5 @@
+// Aiya someone fix this code please. I'd rather not touch it with a ten foot pole ngl
+
 //import { ThemeProvider } from '@mui/material/';
 import { Box, Container, Grid, Typography, TextField, Button, Divider} from '@mui/material/';
 import Slider from '../components/Slider'

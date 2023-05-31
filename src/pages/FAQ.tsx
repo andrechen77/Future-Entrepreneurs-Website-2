@@ -1,90 +1,72 @@
-// // import { useState } from "react";
-// import Card from "@mui/material/Card";
-// import Collapse from "@mui/material/Collapse";
-// import CardHeader from "@mui/material/CardHeader";
-// import Container from "@mui/material/Container";
-// import CardContent from "@mui/material/CardContent";
-// import KeyboardArrowDownIcon from
-// 	"@mui/icons-material/KeyboardArrowDown";
-// import KeyboardArrowUpIcon from
-// 	"@mui/icons-material/KeyboardArrowUp";
-// import IconButton from "@mui/material/IconButton";
+// Do we understand how this mstery Faq component works? How can we elegantly get it to follow the
+// website theme? - Andre
+import Faq from "react-faq-component";
+import "./FAQ.css";
+import Banner from '../components/Banner';
+import { Paper } from '@mui/material/';
 
-// import { ThemeProvider } from '@mui/material/';
-// import theme from './../theme';
+const data = {
+	// title: "FAQ",
+	rows: [
+		{
+			title: "Who is Future Entrepreneurs intended for?",
+			content: "We recommend that any young adult (aged 14-22) interested in learning business, management, and leadership skills in a hands-on environment should join the FE community.",
+		},
+		{
+			title: "Do you have to have an interest in business to be part of Future Entrepreneurs?",
+			content: "No, Future Entrepreneurs is open to all young adults interested in developing their business or communication skills.",
+		},
+		{
+			title: "How is this program going to benefit myself or my child in the long run?",
+			content: "As future entrepreneurs, we are dedicated to providing our students with the necessary resources to learn management, financial literacy, and other life skills to be a successful and contributing member of the business world.",
+		},
+		{
+			title: "There is a fee to join Future Entrepreneurs?",
+			content:
+				"We will offer both some programs that do require a minimal fee to cover expenses. However, cost will never prohibit a student from being involved with our organization. Scholarships will be awarded as needed to students that demonstrate need and payment is not required to be a part of our programs.",
+		},
+		{
+			title: "Who will be leading the workshops and courses at Future Entrepreneurs USA?",
+			content: "The Executive Director Mario Feijoo will be in charge of coordinating all workshops, classes, and seminars. Business owners and professionals in their field of expertise will also be leading sessions for young adults.  ",
+		},
+	],
+};
 
-// // const [open, setOpen] = useState(false);
+const styles = {
+	// bgColor: 'white',
+	titleTextColor: "black",
+	rowTitleColor: "black",
+	rowContentColor: 'black',
+	// arrowColor: "red",
+	rowContentPaddingBottom: '10px',
+	rowContentPaddingLeft: '25px',
+	rowContentPaddingRight: '25px',
+	rowTitleTextSize: '24px',
+	titleTextSize: '30px',
+};
 
-// const FAQ = () => 
-// {	
-	
-// 	return (
-//         <>
+const config = {
+	animate: true,
+	arrowIcon: "V",
+	tabFocus: false,
+};
 
-//         <ThemeProvider theme = {theme}>
-
-// 			<h1 style={{
-// 				display: "flex",
-// 				justifyContent: "center",
-// 				color: "green"
-// 			}}>	</h1>
-
-// 			<Card sx={{
-// 				minWidth: 300,
-// 				border: "1px solid rgba(211,211,211,0.6)"
-// 			}}>
-// 				<CardHeader
-// 					title="Q1"
-// 					action={
-// 						<IconButton
-// 							onClick={() => setOpen(!open)}
-// 							aria-label="expand"
-// 							size="small"
-// 						>
-// 							{open ? <KeyboardArrowUpIcon />
-// 								: <KeyboardArrowDownIcon />}
-// 						</IconButton>
-// 					}
-// 				></CardHeader>
-// 				<div style={{
-// 					backgroundColor: "rgba(211,211,211,0.4)"
-// 				}}>
-// 					<Collapse in={open} timeout="auto"
-// 						unmountOnExit>
-// 						<CardContent>
-// 							<Container sx={{
-// 								height: 100,
-// 								lineHeight: 2
-// 							}}>
-//                                 the future of business
-// 							</Container>
-// 						</CardContent>
-// 					</Collapse>
-// 				</div>
-// 			</Card>
-
-//             </ThemeProvider>
-
-// </>
-// 	);
-// }
-
-// export default FAQ;
-
-
-import { ThemeProvider } from '@mui/material/';
-import theme from './../theme';
-
-const FAQ = () =>{
+function FAQ() {
 	return (
-		<ThemeProvider theme={theme}>
-            <div>
-                <h1>
-                    Blog!!!
-                </h1>
-            </div>
-		</ThemeProvider>
+		<div>
+			<Banner imgsrc="/images/chicago_skyline.jpg" ht={300}>Frequently Asked Questions</Banner>
+			<Paper elevation={5} sx={{ boxShadow: 3 }}>
+				{/* bruh what's with the inconsistent use of styles here */}
+				<div className="faq-style-wrapper">
+					<Faq
+						data={data}
+						styles={styles}
+						config={config}
+					/>
+				</div>
+			</Paper>
+		</div>
 	);
 }
 
-export default FAQ;
+export default FAQ
