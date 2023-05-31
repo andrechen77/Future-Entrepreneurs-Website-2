@@ -10,6 +10,7 @@ export function Footer({ children }: { children: JSX.Element[]}) {
 		<Stack direction="column" spacing={3}>
 			<BigLogo/>
 			<Stack direction="column" spacing={3}>
+				<Typography variant="body2">1966 W. Hawley St. #2 Mundelein, IL 60060</Typography>
 				<SocialIcon
 					img="/images/socials/instagram.svg"
 					handle="futureentrepreneur_"
@@ -27,8 +28,8 @@ export function Footer({ children }: { children: JSX.Element[]}) {
 				/>
 				<SocialIcon
 					img={<EmailIcon/>}
-					handle="futureentreprenuersusa@gmail.com"
-					href="mailto:futureentreprenuersusa@gmail.com"
+					handle="info@reusanfp.com"
+					href="mailto:info@reusanfp.com"
 				/>
 				<SocialIcon
 					img={<PhoneIcon/>}

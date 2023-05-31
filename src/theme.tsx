@@ -3,15 +3,18 @@ import { createTheme } from "@mui/material/styles";
 declare module "@mui/material/styles" {
 	interface TypographyVariants {
 		imgOverlay: React.CSSProperties;
+		body3: React.CSSProperties;
 	}
 
 	interface TypographyVariantsOptions {
 		imgOverlay?: React.CSSProperties;
+		body3: React.CSSProperties;
 	}
 }
 declare module "@mui/material/Typography" {
 	interface TypographyPropsVariantOverrides {
 		imgOverlay: true;
+		body3: true;
 	}
 }
 
@@ -45,9 +48,13 @@ const theme = createTheme({
 			fontFamily: "Commissioner",
 			fontSize: 24,
 		},
-		body2 :{
+		body2: {
 			fontFamily: 'Commissioner',
 			fontSize: 18,
+		},
+		body3: {
+			fontFamily: "Commissioner",
+			fontSize: 12,
 		},
 		imgOverlay: {
 			fontFamily: "Commissioner",
