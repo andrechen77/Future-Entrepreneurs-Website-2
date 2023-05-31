@@ -1,6 +1,9 @@
+// Aiya someone fix this code please. I'd rather not touch it with a ten foot pole ngl
+
 //import { ThemeProvider } from '@mui/material/';
 import { Box, Container, Grid, Typography, TextField} from '@mui/material/';
 import Slider from '../components/Slider'
+import "./FAQ.css"
 
 const HomePage = () => {
 	return (
@@ -13,48 +16,51 @@ const HomePage = () => {
 			<Box style = {{fontSize: 50,
 			textAlign: 'center',
 			fontWeight: 'bold',
-            marginTop: 120,
-            marginBottom: 70}}>
-			Our Mission 
+            marginTop: 60,
+            marginBottom: 30,
+            fontFamily: 'Archivo' }}>
+			Our Mission
 			</Box>
             </Container>
 
             <Container sx={{ maxWidth:'60%', position: 'center'}} maxWidth={false} >
             <p style = {{
 					fontSize: 30,
-					fontWeight: 'normal',
+					fontWeight: "500",
 					textAlign: 'center',
-				}}> Our mission is to create an educational environment that provides opportunities and empowers 
-                young adults to learn business skills through both hands-on experience and training lessons. 
-                We plan to provide youth with resources that will increase their chances of achieving success 
-                in their business.   
-                <br></br> 
-                <br></br> 
-                Our  vision  is  to  build  an  organization  that  has  the  right  programs,  information,  insights, 
-                experience, and services that help youth adults build successful and profitable businesses.  
-                <br></br> 
-                <br></br> 
-                We  understand  that  embarking  on  such  a  journey  takes  a  huge  amount  of  time,  effort,  and 
-                investment.  Knowing  where  and  how  to  begin  can  be  equally  daunting;  this  is  why  Future 
-                Entrepreneurs USA was created.
-                <br></br> 
-                <br></br> 
+                    fontFamily: "Open Sans",
 
-                <div style = {{width: "120%", 
-            position: 'relative', 
+				}}> At Future Entrepreneurs, we wish to create an educational environment that provides opportunities and empowers
+                young adults to learn business skills through both hands-on experience and training lessons.
+                We plan to provide youth with resources that will increase their chances of achieving success
+                in their business.
+                <br></br>
+                <br></br>
+                Our  vision  is  to  build  an  organization  that  has  the  right  programs,  information,  insights,
+                experience, and services that help youth adults build successful and profitable businesses.
+                <br></br>
+                <br></br>
+                We  understand  that  embarking  on  such  a  journey  takes  a  huge  amount  of  time,  effort,  and
+                investment.  Knowing  where  and  how  to  begin  can  be  equally  daunting;  this  is  why  Future
+                Entrepreneurs USA was created.
+                <br></br>
+                <br></br>
+
+                <div style = {{width: "120%",
+            position: 'relative',
             marginLeft: -100}}>
                 <hr></hr>
                 </div>
 
-                <iframe width="950" height="600" 
-                    src="https://www.youtube.com/embed/92ZmzD70sOU" 
+                <iframe width="950" height="600"
+                    src="https://www.youtube.com/embed/92ZmzD70sOU"
                     title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    > 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    >
                 </iframe>
-                <div style = {{width: "120%", 
-            position: 'relative', 
-            marginLeft: -100, 
+                <div style = {{width: "120%",
+            position: 'relative',
+            marginLeft: -100,
             marginTop: 50}}>
                 <hr></hr>
                 </div>
@@ -79,7 +85,7 @@ const HomePage = () => {
                      The Future of Business
                 </Grid>
                 <Grid item style = {{fontSize: 30,
-                textAlign: 'left', 
+                textAlign: 'left',
                 marginTop: -580,
                 marginRight: 200,
                 marginLeft: -580,
@@ -90,8 +96,8 @@ const HomePage = () => {
                     </Grid>
 
 
-                    <div style = {{width: "120%", 
-            position: 'relative', 
+                    <div style = {{width: "120%",
+            position: 'relative',
             marginLeft: -100}}>
                 <hr></hr>
                 </div>
@@ -104,28 +110,28 @@ const HomePage = () => {
                 height: '300px',
                 backgroundColor: '#002C73ff'
                 }}>
-                    <Typography color = "white" fontWeight={'bold'} fontSize = {40}> 
+                    <Typography color = "white" fontWeight={'bold'} fontSize = {40}>
                     Join the FE-USA Community
                     </Typography>
 
-                    <Typography color = "white" fontWeight={'bold'} fontSize = {20} marginBottom  = {10}> 
+                    <Typography color = "white" fontWeight={'bold'} fontSize = {20} marginBottom  = {10}>
                     Sign up with your name and email to receive updates!
                     </Typography>
                     <Box style = {{flexWrap: 'nowrap'}}>
                     <TextField  id="outlined-basic" label="First Name" variant="outlined"  margin = {'none'}/>
                     <TextField id="outlined-basic" label="Last Name" variant="outlined" />
-                        <TextField id="outlined-basic" label="Email" variant="outlined" />   
-                    </Box> 
+                        <TextField id="outlined-basic" label="Email" variant="outlined" />
+                    </Box>
                         </Box>
-                       
 
-                        
-                        
+
+
+
                         </p>
 
 
                 </Container>
-            
+
         </>
 	);
 }
