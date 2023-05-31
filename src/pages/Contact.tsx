@@ -27,9 +27,9 @@ const Contact = () => {
 	const sidebar = (
 		<Box sx={{ typography: "body1", width: 300 }}>
 			<Typography variant="h3">Info</Typography>
-			<Box>(insert address here)</Box>
-			<Box>(insert email here)</Box>
-			<Box>(insert phone number here)</Box>
+			<Box>1966 W. Hawley St. #2 Mundelein, IL 60060</Box>
+			<Box>Email: info@reusanfp.com</Box>
+			<Box>Phone: 847-833-8822</Box>
 		</Box>
 	);
 
