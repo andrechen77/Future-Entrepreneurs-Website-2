@@ -1,15 +1,16 @@
-import { ThemeProvider } from '@mui/material/';
-import theme from './../theme';
+import { Route, Routes } from "react-router-dom";
+import BlogLanding from "./BlogLanding";
+import BlogPost from "./BlogPost";
+import { usePosts } from "../apis/bloggerApi";
 
-const Blog = () =>{
+const Blog = () => {
+	const { loading, posts } = usePosts();
+
 	return (
-		<ThemeProvider theme={theme}>
-            <div>
-                <h1>
-                    Blog!!!
-                </h1>
-            </div>
-		</ThemeProvider>
+		<Routes>
+			<Route index element={<BlogLanding loading={loading} posts={posts}/>}/>
+			<Route path=":postId" element={<BlogPost/>}/>
+		</Routes>
 	);
 }
 
