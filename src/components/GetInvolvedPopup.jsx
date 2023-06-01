@@ -19,9 +19,9 @@ const overlayStyle = { background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(8px)
 				padding: 1,
 				backgroundColor: 'primary.main',
 				color: 'primary.light',
-				}} 
-				variant='contained'> 
-				Donate Here 
+				}}
+				variant='contained'>
+				Donate Here
 			</Button>}
 			modal nested
 			overlayStyle={overlayStyle}
@@ -39,7 +39,7 @@ const overlayStyle = { background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(8px)
 						}}>
 						<div className='content'>
 							<Typography variant='h4'>
-								Donate Here: 
+								Donate Here:
 							</Typography>
 							<Button sx = {buttoncss}> $10 </Button>
 							<Button sx = {buttoncss}> $25 </Button>
@@ -76,22 +76,16 @@ export function VolunteerPopup() {
             sx={{
                 margin: 0,
                 padding: 1,
-                backgroundColor: 'primary.main',
-                color: 'primary.light',
+                color: 'primary',
             }}
             variant="contained"
-			
+
         >
             Volunteer Here
         </Button>
     );
 };
- 
 
-
-
-
- 
 export function DonatePopup() {
     return (
         <form
@@ -110,8 +104,7 @@ export function DonatePopup() {
                 sx={{
                     margin: 0,
                     padding: 1,
-                    backgroundColor: 'primary.main',
-                    color: 'primary.light',
+                    color: 'primary',
                 }}
                 variant="contained"
             >
