@@ -1,29 +1,24 @@
 import {DonatePopup, VolunteerPopup} from './../components/GetInvolvedPopup';
-import {Box, Typography, Grid, Container} from '@mui/material';
+import {Box, Paper, Typography, Grid, Container} from '@mui/material';
+import Banner from '.././components/Banner';
 
 const GetInvolved = () =>{
 	return (
-        <Box sx={{backgroundColor: 'common.white', padding:5}}>
+        <Box sx={{backgroundColor: 'common.white'}}>
             <div>
-            <Typography align="center" variant="h2" >
-                Get Involved
-            </Typography>
-
-            <Typography align="center" variant="h3">
-                Become a part of the team. Change a life
-            </Typography>
+            <Banner imgsrc="/images/chicago_skyline.jpg" ht={200}>Getting Involved</Banner>
 
             <Typography align="center" variant="body1" sx={{padding:3}}>
             </Typography>
 
             <Container sx={{ padding:1}}>
                 <Grid container spacing={2} justifyContent = 'center'>
-                    <Grid item xs={-10} sx={{padding:0}}>
-                            <img src='/images/icon.png' alt="Logo" />
-                    </Grid>
+                    <Paper elevation={1} sx={{ p:2, boxShadow: 3}}>
+                            <img src='/images/get-involved2.jpg' alt="Logo" width ='800' />
+                    </Paper >
 
                     <Grid item xs={15} sx={{padding:0}}>
-                        <Typography align="left" variant="h3">
+                        <Typography align="left" variant="h3" color = "primary.main">
                             Donate
                         </Typography>
                     </Grid>
@@ -33,18 +28,18 @@ const GetInvolved = () =>{
                             Welcome to our non-profit organization's donation page! Your contribution can make a real difference in the lives of the people we serve. Whether you are donating for the first time or have been a long-time supporter, we thank you for considering our cause. Your donation will help us continue to provide vital services and programs that directly impact the lives of those in need. From funding research to providing basic necessities, your generosity will help us make a positive impact in the world. With your support, we can create lasting change and help those in need reach their full potential. Thank you for being a part of our mission and helping us make a difference.
                             <br />
                             <br />
-                            Future Entrepreneurs is a Section 501(c) (3) charitable organization, EIN WEDONTHAVETHIS. All donations are deemed tax-deductible absent any limitations on deductibility applicable to a particular taxpayer. No goods or services were provided in exchange for your contribution.
+                            Future Entrepreneurs is a Section 501(c) (3) charitable organization, EIN 92-1488576. All donations are deemed tax-deductible absent any limitations on deductibility applicable to a particular taxpayer. No goods or services were provided in exchange for your contribution.
 
                             <br />
                             <br />
                             <DonatePopup/>
                         </Typography>
                     </Grid>
-                    <Grid item xs={-10} sx={{padding:0}}>
-                            <img src='/images/icon.png' alt="Logo" />
-                    </Grid>
+                    <Paper elevation={1} sx = {{ p:2, boxShadow: 3 }} > 
+                            <img src='/images/get-involved1.jpg' alt="Logo" width = "800" />
+                    </Paper>
                     <Grid item xs={15} sx={{padding:0}}>
-                        <Typography align="left" variant="h3">
+                        <Typography align="left" variant="h3" color = "primary.main">
                             Volunteer
                         </Typography>
                     </Grid>

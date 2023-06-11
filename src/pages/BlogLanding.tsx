@@ -67,7 +67,7 @@ export default function BlogLanding({ loading, posts }: { loading: boolean, post
 
 	return (
 		<Box>
-			<Banner imgsrc="/images/chicago_skyline.jpg" ht={200}>Future Entrepreneurs Blog</Banner>
+			<Banner imgsrc="/images/chicago_skyline.jpg" ht={200}>FE Blog</Banner>
 			{<Container>
 				<Stack sx={{ p: 3 }}>
 					{imageSlider}

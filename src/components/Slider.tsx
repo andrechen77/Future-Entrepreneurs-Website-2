@@ -10,10 +10,15 @@ function Slider() {
             text: "Strive for the best.",
         },
         {
-            name: "/images/fe-stockphoto.png",
+            name: "/images/fe-stockphoto.jpg",
             size: 600,
             text: "Find a supportive community.",
         },
+        {
+            name: "/images/fe-stockphoto2.jpg",
+            size: 600, 
+            text: "Become a leader of tomorrow."
+        }
     ];
 
     return (

@@ -19,7 +19,7 @@ function AboutSection({name, children, left, profile}: AboutSectionProps) {
 			<Box sx={{ p: 2, [theme.breakpoints.up("sm")]: { float: (left ? "left" : "right"), maxWidth: 400 }, maxWidth: "100%"}}>
 				<img css={{width: "100%", borderRadius: '16px'}} src={profile} alt={name}/>
 			</Box>
-			<Typography variant="h3">{name}</Typography>
+			<Typography variant="h3" color = "primary.main">{name}</Typography>
 			<Typography variant="body1">{children}</Typography>
 		</Paper>
 	);
