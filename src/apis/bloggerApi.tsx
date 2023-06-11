@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 
-const blogId = "2770090416290081688";
-const apiKey = "AIzaSyCddmIa64GdGVmtCWEjQT2RMzB6jExm30E";
+// const blogId = "2770090416290081688";
+// const blogId = "5737509104983149853";
+const blogId = "4795805533032311892";
+// const apiKey = "AIzaSyCddmIa64GdGVmtCWEjQT2RMzB6jExm30E";
 
+const apiKey = "AIzaSyDFl7JvVkPjTrEyJ74iooGkSHfYprbqU7Q";
 export interface BlogPost { // matches the API's response, with noted exceptions
 	id: string,
 	published: Date, // returns as string

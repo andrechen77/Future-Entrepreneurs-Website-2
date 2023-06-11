@@ -27,11 +27,12 @@ const theme = createTheme({
 			"Times New Roman",
 			"Arial",
 			"sans-serif",
+			"Commissioner"
 		].join(","),
 		h2: {
 			fontFamily: "Commissioner",
 			fontSize: 75,
-			letterSpacing: 2.5,
+			letterSpacing: 1,
 			fontWeight: "bold",
 			gridArea: "right",
 			paddingBottom: 5,
@@ -39,10 +40,15 @@ const theme = createTheme({
 		h3: {
 			fontFamily: "Commissioner",
 			fontSize: 50,
-			letterSpacing: 2.5,
+			letterSpacing: 1,
 			fontWeight: "bold",
 			gridArea: "right",
 			paddingBottom: 5,
+		},
+		h4: { 
+			fontFamily: "Commissioner", 
+			fontSize: 45, 
+			fontWeight: 'bold', 
 		},
 		body1: {
 			fontFamily: "Commissioner",
@@ -71,6 +77,7 @@ const theme = createTheme({
 		primary: {
 			// oldmain: "#022e74",
 			main: "#062E78",
+			light: '#ffffff',
 		},
 		secondary: {
 			main: "#ffcc04"

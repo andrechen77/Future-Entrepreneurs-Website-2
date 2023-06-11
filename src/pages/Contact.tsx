@@ -14,7 +14,7 @@ const Contact = () => {
 
 	const emailForm = (
 		<Box>
-			<Typography variant="h3" sx={{ my: 1 }}>Send us a message</Typography>
+			<Typography variant="h3" color = "primary.main" sx={{ my: 1 }}>Send us a message</Typography>
 			<Stack spacing={1} alignItems="center">
 				<TextField label="Name" fullWidth value={name} onChange={e => setName(e.target.value)}/>
 				<TextField label="Email Address" fullWidth value={email} onChange={e => setEmail(e.target.value)}/>
@@ -29,7 +29,7 @@ const Contact = () => {
 
 	const sidebar = (
 		<Box sx={{ typography: "body1", width: 300 }}>
-			<Typography variant="h3">Info</Typography>
+			<Typography variant="h3" color = "primary.main">Info</Typography>
 			<Box>1966 W. Hawley St. #2 Mundelein, IL 60060</Box>
 			<Box>Email: info@reusanfp.com</Box>
 			<Box>Phone: 847-833-8822</Box>
@@ -38,7 +38,7 @@ const Contact = () => {
 
 	return (
 		<Box>
-			<Banner imgsrc="/images/chicago_skyline.jpg" ht={200}>CONTACT US</Banner>
+			<Banner imgsrc="/images/chicago_skyline.jpg" ht={200}>Contact Us</Banner>
 			<Container>
 				<Grid container spacing={3} sx={{ p: 3 }}>
 					<Grid item xs={12} md>
