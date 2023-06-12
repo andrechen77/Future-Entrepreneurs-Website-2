@@ -36,7 +36,7 @@ function App() {
 					<Route path='faq' element={<FAQ/>}/>
 				</Routes>
 				<Footer>{[
-					<FooterColumn header="Our Pages" links={NavBarLinks}/>
+					<FooterColumn key="" header="Our Pages" links={NavBarLinks}/>
 				]}</Footer>
 			</Stack>
 		</ThemeProvider>

@@ -54,7 +54,7 @@ const config = {
 function FAQ() {
 	return (
 		<div>
-			<Banner imgsrc="/images/chicago_skyline.jpg" ht={200}>FAQs</Banner>
+			<Banner imgsrc="/images/chicago_skyline.jpg" ht={200}>Frequently Asked Questions</Banner>
 			<Paper elevation={5} sx={{ boxShadow: 3 }}>
 				{/* bruh what's with the inconsistent use of styles here */}
 				<div className="faq-style-wrapper">

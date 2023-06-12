@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
 	interface TypographyVariants {
@@ -18,7 +18,7 @@ declare module "@mui/material/Typography" {
 	}
 }
 
-const theme = createTheme({
+const theme = responsiveFontSizes(createTheme({
 	typography: {
 		fontFamily: [
 			"Segoe UI",
@@ -45,10 +45,10 @@ const theme = createTheme({
 			gridArea: "right",
 			paddingBottom: 5,
 		},
-		h4: { 
-			fontFamily: "Commissioner", 
-			fontSize: 45, 
-			fontWeight: 'bold', 
+		h4: {
+			fontFamily: "Commissioner",
+			fontSize: 45,
+			fontWeight: 'bold',
 		},
 		body1: {
 			fontFamily: "Commissioner",
@@ -83,6 +83,6 @@ const theme = createTheme({
 			main: "#ffcc04"
 		},
 	},
-});
+}));
 
 export default theme;

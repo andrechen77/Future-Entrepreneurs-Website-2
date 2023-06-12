@@ -43,7 +43,7 @@ export function Footer({ children }: { children: JSX.Element[]}) {
 	return (
 		<Paper square elevation={0} sx={{ bgcolor: "primary.main", typography: "body1", p: 3, color: "common.white" }}>
 			<Grid container direction="row" justifyContent="space-between" spacing={3}>
-				<Grid item xs="auto">
+				<Grid item xs={12} md="auto">
 					{footerMain}
 				</Grid>
 				<Grid xs={12} md="auto" item container direction="row" wrap="wrap" spacing={3}>
