@@ -19,7 +19,7 @@ const Contact = () => {
 				<TextField label="Name" fullWidth value={name} onChange={e => setName(e.target.value)}/>
 				<TextField label="Email Address" fullWidth value={email} onChange={e => setEmail(e.target.value)}/>
 				<TextField label="Message" fullWidth multiline rows={7} value={message} onChange={e => setMessage(e.target.value)}/>
-				<Button variant="contained" onClick={handleSubmission}>Submit</Button>
+				<Button variant="contained" onClick={handleSubmission} style = {{ fontSize: '18px'  }}>Submit</Button>
 				<Typography variant="body3">
 					At the moment, this form just uses your standard mail client.
 				</Typography>

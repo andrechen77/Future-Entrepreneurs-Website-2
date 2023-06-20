@@ -18,7 +18,18 @@ declare module "@mui/material/Typography" {
 	}
 }
 
+
+
 const theme = responsiveFontSizes(createTheme({
+	components: {
+		MuiMenuItem: {
+			styleOverrides: {
+				root: {
+					fontSize: 1,
+				},
+			},
+		},
+	},
 	typography: {
 		fontFamily: [
 			"Segoe UI",
